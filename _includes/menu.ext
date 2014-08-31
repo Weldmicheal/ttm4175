@@ -1,0 +1,46 @@
+<div class="infobox">
+<ul id="menu">
+  <li>
+  <a href="../a1/a1.html"><b>A1: Java and Eclipse</b></a>
+  <ul>
+    <li><span class="glyphicon glyphicon-book"><a href="../a1/programming.html">Programming</a></li>
+    <li><span class="glyphicon glyphicon-book"><a href="../a1/eclipse.html">Eclipse</a></li>
+    <li><span class="glyphicon glyphicon-book"><a href="../a1/java-tools.html">Java Tools</a></li>
+    <li><span class="glyphicon glyphicon-book"><a href="../a1/java-language.html">Java Language</a></li>
+    <li><span class="glyphicon glyphicon-cog"><a href="../a1/preparation-a1.html">Preparation</a></li>
+    <li><span class="glyphicon glyphicon-wrench"><a href="../a1/lab-a1.html">Lab A1: Java and Eclipse</a></li>
+  </ul>
+</li>
+
+  <li>
+  <a href="#">A2: Reactive Blocks</a>
+  <ul>
+    <li><span class="glyphicon glyphicon-cog"></span><a href="../a2/preparation-lab2.html">Preparation</a></li>
+    <li><span class="glyphicon glyphicon-wrench"></span><a href="../a2/lab-a2.html">Lab A2: Moving Malcom</a></li>
+  </ul>
+</li>
+
+  <li>
+  <a href="#">A3: Raspberry Pi</a>
+  <ul>
+  
+  <li><a href="../a3/general-recipes.html">General Recipes</a></li>
+  <li><a href="../a3/java-recipes.html">Java Recipes</a></li>
+  
+  </ul>
+</li>
+
+  <li>
+  <a href="#">A4: Bluetooth</a>
+  <ul>
+  </ul>
+</li>
+
+  <li>
+  <a href="#">A5: Communication</a>
+  <ul>
+  </ul>
+</li>
+
+</ul>
+</div>
