@@ -3,13 +3,7 @@ layout: default
 title:  Java Exercises
 ---
 
-    -2.. too easy
-    -1.. easy 
-     0.. just the right difficulty 
-    +1.. hard, but doable
-    +2.. too hard
-    
-# Java Exercises
+# Lab A1: Java and Eclipse
 
 
 ## Hello World
@@ -18,10 +12,13 @@ title:  Java Exercises
 
 [eclipse]: eclipse.html
 
+
 ## Java Keyword Piles
 
-**Task A1.1:**
-Print the cards with the Java keywords, and cut them out. Shuffle the cards and pile them up. Each of the team members draws a card from the pile and assigns them to one of the keyword groups. Discuss for each keyword group what it is used for.
+**Task A1.2:**
+Print the [cards with the Java keywords], and cut them out. Shuffle the cards and pile them up. Each of the team members draws a card from the pile and assigns them to one of the keyword groups. Discuss for each keyword group what it is used for.
+
+[cards with the Java keywords]: https://dl.dropboxusercontent.com/u/830148/ttm4175/keyword-piles.pdf
 
 Take a picture of the piles and include it in your report.
 
@@ -35,15 +32,15 @@ The following method contains a simple for-loop.
 		}
 	}
 
-Hint: The statement `i=i+1;` increments the counter `i` by one. This statement can also be written as `i++`. So if you see it elsewhere, you know what it means. 
+**Hint:** The statement `i=i+1;` increments the counter `i` by one. This statement can also be written as `i++`. So if you see it elsewhere, you know what it means. 
 
-**Task:** 
+**Task A1.3:** 
 Before running the main method and calling `loop1()` in it, try to predict what you will see in the console window. Write down you prediction. After that, run the program. Compare.
 
 
 Exchange the method call `System.out.println(i)` with `System.out.print(i)`. The method `println(i)` is documented [here][println], and `print(i)` is documented [here][print].
 
-**Task:**
+**Task A1.4:**
 Read the documentation of these two methods, and try to predict what will happen. Then, run the program. Describe.
 
 [println]: http://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html#println-java.lang.String-
@@ -58,14 +55,16 @@ Have a look at the loop in method `loop2()`. Something very important is missing
 		}
 	}
 
-**Task:** What is happening here? Which statement is missing? Make a screenshot of the debug view and include it in the report.
+**Task A1.5:** What is happening here? Which statement is missing? Make a screenshot of the debug view and include it in the report.
+
+**Hint:** To abort a running program, you can click the red stop button in the console view. The grey x-buttons remove the output of a program after it terminated.
 
 ![Alt text](images/stop-console.png)
 
 
 ## Fibonacci Messed it up
 
-The [Fibonacci numbers][wiki] form a series of numbers 
+The [Fibonacci numbers][wiki] form the following series of numbers: 
 
     0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
 
@@ -73,10 +72,10 @@ Starting with the numbers 0, 1, the following numbers in this series are calcula
 
 [wiki]: http://en.wikipedia.org/wiki/Fibonacci_number
 
-**Task:**
+**Task A1.6:**
 The sequence above shos the first 10 Fibonacci numbers. Which are the subsequent two numbers?
 
-**Task A1.2:**
+**Task A1.7:**
 Write a function in Java that returns the n-th Fibonacci number. The method should have the following signature:
 
     public static long fib(int n) {
@@ -89,7 +88,9 @@ Within the method, use a for-loop and an integer variables to calculate the resu
     
 **Solution Alternative 1 (Advanced):** Write the contents of the method yourself. 
 
-**Solution Alternative 2:** Find the solution, by re-ordering the following code lines. Simply assume Mr. Fibonacci has messed up his program and you should sort it again.
+**Solution Alternative 2:** Find the solution, by re-ordering the following code lines. Simply assume Mr. Fibonacci has messed up his program and you should sort it again. You can reorder the lines directly in your editor, or do it with scissors and paper using this [PDF].
+
+[PDF]: https://dl.dropboxusercontent.com/u/830148/ttm4175/fibonacci.pdf
 
     }
     }
@@ -109,15 +110,10 @@ Within the method, use a for-loop and an integer variables to calculate the resu
     return sum;
     sum = int1 + int2;
 
-**Task:**
-Describe briefly why this method can be *static*. You may have a look at the explanations given on [Stackoverflow].
-
-[Stackoverflow]: http://stackoverflow.com/questions/413898/what-does-the-static-keyword-do-in-a-class
-
-**Task:** (Advanced)
+**Task A1.8:** (Advanced)
 Given that you are using integers as variables, until which n can you calculate the numbers? What happens if you go above it?
 
-**Task:** (Advanced)
+**Task A1.9:** (Advanced)
 Another way to calculate the Fibonacci numbers is the following:
 
     public static long fibRec(int n) {
@@ -129,8 +125,9 @@ This function `fibRec()` calls itself. Can you explain how this works?
 
 ## Multiplication Table
 
-**Task:**
+**Task A1.10:**
 Write a program that has the following output:
+
 <!-- taken from http://www.ntu.edu.sg/home/ehchua/programming/java/J2a_BasicsExercises.html -->
 
      * |  1  2  3  4  5  6  7  8  9
@@ -241,11 +238,3 @@ Which is the word that is most often used?
 Take out often used words, like "the, a, ..." The result is little surprising. 
 
 Check it by making a wordle. http://www.wordle.net
-
-# More Exercises
-
-### Task
-
-Download a jar, add it to the design-time classpath, but forget it on the runtime classpath. What happens?
-
-http://codingbat.com    
