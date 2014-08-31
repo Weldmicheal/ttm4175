@@ -51,7 +51,7 @@ If the Java perspective is not already opened, you can open it:
 
 Window / Open Perspective / Other... / Java 
 
-You can re-arrange the views and editors as you wish. If you want to go back to the orignal layout of a perspective, simply select *Window / Reset perspective...* You can also open more views via *Window / Show View / Ohters...*
+You can re-arrange the views and editors as you wish. If you want to go back to the orignal layout of a perspective, simply select *Window / Reset perspective...* You can also open more views via *Window / Show View / Others...*
 
 The Java perspective contains by default a number of views that are useful for Java editing. For now, we are not going to use the Task list, Outline, Declaration and Javadoc views. To get more space on your screen, you can close them.
 The only views we are going to use are the following:
@@ -69,7 +69,7 @@ Eclipse organizes all your files in the **workspace**. This workspace correspond
 
 The workspace contains several Eclipse **projects**. These projects correspond to sub-folders within the workspace folder. (Projects can also be configured to reside in totally different places, but we ignore that for now.)
 
-Eclipse projects are units of work that belong together, but they can still refer to each other. Whn you develop a large application, for instance, you can structure it into different projects that refer to each other. Later in the course, for instance, we will have different Eclipse projects for each larger exercise, just to separate things from each other.
+Eclipse projects are units of work that belong together, but they can still refer to each other. When you develop a large application, for instance, you can structure it into different projects that refer to each other. Later in the course, for instance, we will have different Eclipse projects for each larger exercise, just to separate things from each other.
 You can see the projects in the Package Explorer. It will probably be empty; so let's create a project first.
 
 When you create a new Eclipse project, you can select the type of project. When we select to create a Java project, for example, Eclipse will already create some folders and files that are useful for Java development. It will also create some default settings. In addition, the type of project determines what happens in the background whenever you save a file, but more on that later.
@@ -77,7 +77,7 @@ When you create a new Eclipse project, you can select the type of project. When 
 * Create new projects via File / New Project...
 * From there, select **Java Project**.
 * Give the project a name, for instance *ttm4175*
-* The project will be created in the default location (the folder within the workspace folder on your hard disk) and with the defualt settings for Java projects. These defaults are good for us, so leave them as they are and select **Finish**.
+* The project will be created in the default location (the folder within the workspace folder on your hard disk) and with the default settings for Java projects. These defaults are good for us, so leave them as they are and select **Finish**.
 
 ![Alt text](images/new-project.png)
 
@@ -96,7 +96,7 @@ The source folder, called *src* will contain all our Java source files. Since we
 
 The class needs a name. We call it *HelloWorld*, and enter it in the field labelled *Name:*. The package in which we are going to create the class is already called the same as the project, that is *ttm4175*. 
 
-Since we want to execute that class, we also need a main method. Therefore, we clich the check box *public static void main(String[] args)* (Later more on what that is.) The other settings are good as they are.
+Since we want to execute that class, we also need a main method. Therefore, we click the check box *public static void main(String[] args)* (Later more on what that is.) The other settings are good as they are.
 
 Click finish, and the following class will be created:
 
@@ -114,7 +114,7 @@ To write our program, we remove the comments (the lines that are started by the 
 
 ## Running Hello World
 
-In Eclipse, we can direclty run Java programs:
+In Eclipse, we can directly run Java programs:
 
 * Select the file *HelloWorld.java* in the Package Explorer
 * Select Run As / Java Application

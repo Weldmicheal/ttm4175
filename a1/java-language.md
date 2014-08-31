@@ -101,7 +101,7 @@ We have seen that we can use System.out.println() to write something to the cons
 	long milliseconds = System.currentTimeMillis();
 	System.out.println("Milliseconds since 1 January 1970 00:00:00: " + milliseconds);
 		
-The class Math provides many mathemetical operations:
+The class Math provides many mathematical operations:
         
 	// get a random number
 	double random = Math.random();

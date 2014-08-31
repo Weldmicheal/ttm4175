@@ -42,7 +42,7 @@ As a result, the Blocks view should look like this:
 ![Alt text](images/tutorial-games-project.png)
 
 
-## Finishin a Level
+## Finishing a Level
 
 On each level, you learn about different elements of UML activities. 
 Each level consists of two systems: A system called LevelX_Introduction and a system called LevelX.
@@ -66,7 +66,7 @@ Now a window should open that explains the level. Read through the descriptions,
 After you went through the introduction of a level,
 Work on the solution of the level:
 
-Open system LevelX, and use the operarions and other elements to build a solution.
+Open system LevelX, and use the operations and other elements to build a solution.
 
 Build the systems the same way as you built the introduction to try out your solution. Adjust your design and repeat until you have solved the level.
 

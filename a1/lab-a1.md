@@ -222,7 +222,7 @@ Use the String tokenizer to separate all the words within one line.
 
 We have added a method to find out if the word is a very common one, like "the" or "to". Describe in your own words how this method works. 
 
-You can meassure the execution time
+You can measure the execution time
  
 
 Which chapter mentions the teapot?
@@ -244,6 +244,6 @@ Check it by making a wordle. http://www.wordle.net
 
 ### Task
 
-Download a jar, add it to the design-time classpath, but forget it on the runtime classpath. Whatt happens?
+Download a jar, add it to the design-time classpath, but forget it on the runtime classpath. What happens?
 
 http://codingbat.com    
