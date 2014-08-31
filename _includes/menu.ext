@@ -11,17 +11,21 @@
     <li><span class="glyphicon glyphicon-wrench"><a href="../a1/lab-a1.html">Lab A1: Java and Eclipse</a></li>
   </ul>
 </li>
-
+</ul>
+<div class="infobox">
+<ul id="menu">
   <li>
-  <a href="#">A2: Reactive Blocks</a>
+  <a href="#"><b>A2: Reactive Blocks</b></a>
   <ul>
     <li><span class="glyphicon glyphicon-cog"></span><a href="../a2/preparation-lab2.html">Preparation</a></li>
     <li><span class="glyphicon glyphicon-wrench"></span><a href="../a2/lab-a2.html">Lab A2: Moving Malcom</a></li>
   </ul>
 </li>
-
+</ul>
+<div class="infobox">
+<ul id="menu">
   <li>
-  <a href="#">A3: Raspberry Pi</a>
+  <a href="#"><b>A3: Raspberry Pi</b></a>
   <ul>
   
   <li><a href="../a3/general-recipes.html">General Recipes</a></li>
@@ -29,15 +33,19 @@
   
   </ul>
 </li>
-
+</ul>
+<div class="infobox">
+<ul id="menu">
   <li>
-  <a href="#">A4: Bluetooth</a>
+  <a href="#"><b>A4: Bluetooth</b></a>
   <ul>
   </ul>
 </li>
-
+</ul>
+<div class="infobox">
+<ul id="menu">
   <li>
-  <a href="#">A5: Communication</a>
+  <a href="#"><b>A5: Communication</b></a>
   <ul>
   </ul>
 </li>

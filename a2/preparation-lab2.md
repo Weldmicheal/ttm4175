@@ -3,6 +3,8 @@ layout: default
 title:  Preparation of Lab A2
 ---
 
+# Preparation
+
 ## Install Reactive Blocks
 
 This requires that you have installed Java 7 and Eclipse 4.4 from the previous lab.

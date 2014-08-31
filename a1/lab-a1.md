@@ -58,7 +58,9 @@ Have a look at the loop in method `loop2()`. Something very important is missing
 		}
 	}
 
-**Task:** What is happening here? Which statement is missing?
+**Task:** What is happening here? Which statement is missing? Make a screenshot of the debug view and include it in the report.
+
+![Alt text](images/stop-console.png)
 
 
 ## Fibonacci Messed it up
