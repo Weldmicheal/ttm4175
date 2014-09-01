@@ -8,7 +8,7 @@ title:  Java Exercises
 **Task:**
 Read the documentation for the [list] and the [set] interfaces. Both are collections of objects. State briefly in your own words what the most important differences between the two are.
 
-[list]: http://docs.oracle.com/javase/8/docs/api/index.html?java/util/Set.html
+[list]: http://docs.oracle.com/javase/8/docs/api/index.html?java/util/List.html
 [set]: http://docs.oracle.com/javase/8/docs/api/index.html?java/util/Set.html
 
 **Task:**

@@ -29,11 +29,9 @@ Machine code instructions are executed by the central processing unit. The instr
 It is possible to express small programs in machine code instructions. But since the instructions are on such a detailed level, it is hard to express a program with the concepts that are in the problem domain of the program. 
 
 
-Later, magnetic material was used to store programs and data, instead of the punch card made of paper. This increased tremendously how much data could be stored and how fast it could be acessed. On the software side, this made it possible to write more complex and larger programs and process more data.
+Later, magnetic material was used to store programs and data, instead of the punch card made of paper. This increased how much data could be stored and how fast it could be acessed. On the software side, this made it possible to write more complex and larger programs and process more data.
 This also means that it is not feasible anymore to write the machine code for programs manually. In machine code, it's very easy to make mistakes, and one needs many instructions to do simple operations. 
 
-Therefore, we use higher-level programming languages. With a programing language we can express 
-
-The use of languages is made possible by a compiler. It takes a program and translates it into machine code, i.e., it "compiles" the program. During that process, it can also optimize the program, so that it can run faster and use less memory. (This is another reason why you probalbly won't write machine code on your own. It is unlikely that cou can produce more efficient code than a compiler if the program has a certain extend.)
+Therefore, higher-level programming languages were developed. The use of programing languages is made possible by a compiler. It takes a program and translates it into machine code, i.e., it "compiles" the program. During that process, it can also optimize the program, so that it can run faster and use less memory. (This is another reason why you probalbly won't write machine code on your own. It is unlikely that cou can produce more efficient code than a compiler if the program has a certain extend.)
 
 But computers still work the same way. With instructions the control unit works on the data. 

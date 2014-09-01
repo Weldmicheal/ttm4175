@@ -196,6 +196,32 @@ http://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html
 http://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html
 
 ### Operators
+
+
+		boolean a = false;
+		boolean b = false;
+		System.out.println("   a     b    a || b");
+		System.out.println(" " + a + " " + b + " " + (a || b));
+		b = true;
+		System.out.println(" " + a + " " + b + "  " + (a || b));
+		a = true;
+		b = false;
+		System.out.println(" " + a + "  " + b + " " + (a || b));
+		b = true;
+		System.out.println(" " + a + "  " + b + "  " + (a || b));
+		
+		a = false;
+		b = false;
+		System.out.println("   a     b    a && b");
+		System.out.println(" " + a + " " + b + " " + (a && b));
+		b = true;
+		System.out.println(" " + a + " " + b + "  " + (a && b));
+		a = true;
+		b = false;
+		System.out.println(" " + a + "  " + b + " " + (a && b));
+		b = true;
+		System.out.println(" " + a + "  " + b + "  " + (a && b));
+
 Assignment
 
     =
