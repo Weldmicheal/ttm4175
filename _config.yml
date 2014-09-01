@@ -1,4 +1,4 @@
 name: TTM4175
-markdown: redcarpet
+markdown: kramdown
 pygments: true
 highlighter: pygments
