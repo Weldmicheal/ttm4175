@@ -16,7 +16,7 @@ title:  Java Exercises
 ## Java Keyword Piles
 
 **Task A1.2:**
-Print the [cards with the Java keywords], and cut them out. Shuffle the cards and pile them up. Each of the team members draws a card from the pile and assigns them to one of the keyword groups. Discuss for each keyword group what it is used for.
+Print the [cards with the Java keywords], and cut them out. Shuffle the cards and pile them up. Draw cards from the pile and assign them to one of the keyword groups. Discuss for each keyword group what it is used for.
 
 [cards with the Java keywords]: https://dl.dropboxusercontent.com/u/830148/ttm4175/keyword-piles.pdf
 
@@ -88,27 +88,10 @@ Within the method, use a for-loop and an integer variables to calculate the resu
     
 **Solution Alternative 1 (Advanced):** Write the contents of the method yourself. 
 
-**Solution Alternative 2:** Find the solution, by re-ordering the following code lines. Simply assume Mr. Fibonacci has messed up his program and you should sort it again. You can reorder the lines directly in your editor, or do it with scissors and paper using this [PDF].
+**Solution Alternative 2:** Find the solution, by re-ordering the following code lines. Simply assume Mr. Fibonacci has messed up his algorithm and you should sort it again. We have placed the code lines on [this extra page].
 
-[PDF]: https://dl.dropboxusercontent.com/u/830148/ttm4175/fibonacci.pdf
+[this extra page]: fibonacci.html
 
-    }
-    }
-    }
-    } else {
-    } else if(n==1) {
-    for(int i=1; i<n; i++) {
-    if(n==0) {
-    int int1 = 1;
-    int int2 = 0;
-    int sum = 0;
-    int1 = sum;
-    int2 = int1;
-    public static int fib(int n) {
-    return 0;
-    return 1;
-    return sum;
-    sum = int1 + int2;
 
 **Task A1.8:** (Advanced)
 Given that you are using integers as variables, until which n can you calculate the numbers? What happens if you go above it?
