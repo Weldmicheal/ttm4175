@@ -75,7 +75,6 @@ Starting with the numbers 0, 1, the following numbers in this series are calcula
 **Task A1.6:**
 The sequence above shos the first 10 Fibonacci numbers. Which are the subsequent two numbers?
 
-**Task A1.7:**
 Write a function in Java that returns the n-th Fibonacci number. The method should have the following signature:
 
     public static long fib(int n) {
@@ -84,19 +83,17 @@ Write a function in Java that returns the n-th Fibonacci number. The method shou
 
 In the template for this exercise we have included a main method. It calls the fib method with some pre-calculated values. It works like a test suite, by checking if your method calculates the correct numbers at least for some selected examples. Use it while you develop your implementation of `fib(int n)`.  
 
-Within the method, use a for-loop and an integer variables to calculate the result. It may be necessary to treat the first two values separately. For that, you can use if-statements. 
-    
-**Solution Alternative 1 (Advanced):** Write the contents of the method yourself. 
+**Task A1.7 (Advanced)** Write the contents of the method yourself. Within the method, use a for-loop and an integer variables to calculate the result. It may be necessary to treat the first two values separately. For that, you can use if-statements. If you manage to do this task, ignore task A1.8.
 
-**Solution Alternative 2:** Find the solution, by re-ordering the following code lines. Simply assume Mr. Fibonacci has messed up his algorithm and you should sort it again. We have placed the code lines on [this extra page].
+**Task A1.8:** Find the solution for task A1.7, by re-ordering given code lines. Simply assume Mr. Fibonacci has messed up his algorithm and you should sort it again. We have placed the code lines on [this extra page].
 
 [this extra page]: fibonacci.html
 
 
-**Task A1.8:** (Advanced)
+**Task A1.9 (Advanced):**
 Given that you are using integers as variables, until which n can you calculate the numbers? What happens if you go above it?
 
-**Task A1.9:** (Advanced)
+**Task A1.10 (Advanced):**
 Another way to calculate the Fibonacci numbers is the following:
 
     public static long fibRec(int n) {
@@ -108,7 +105,7 @@ This function `fibRec()` calls itself. Can you explain how this works?
 
 ## Multiplication Table
 
-**Task A1.10:**
+**Task A1.11:**
 Write a program that has the following output:
 
 <!-- taken from http://www.ntu.edu.sg/home/ehchua/programming/java/J2a_BasicsExercises.html -->
