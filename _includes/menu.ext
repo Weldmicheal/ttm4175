@@ -4,16 +4,17 @@
   <a href="../a1/a1.html"><b>A1: Java and Eclipse</b></a>
   <ul class="fa-ul">
     <li><i class="fa-li fa fa-book"></i><a href="../a1/programming.html">Programming</a></li>
-    <li><i class="fa-li fa fa-book"></i><a href="../a1/eclipse.html">Eclipse</a></li>
-<!--    
+    <li><i class="fa-li fa fa-book"></i><a href="../a1/eclipse.html">Eclipse</a></li>    
     <li><i class="fa-li fa fa-check-square"></i><a href="../a1/java-tools.html">Java Tools</a></li>
-    <li><i class="fa-li fa fa-book"></i><a href="../a1/java-language.html">Java Language</a></li>-->
+    <li><i class="fa-li fa fa-book"></i><a href="../a1/java-language.html">Java Language</a></li>
     <li><i class="fa-li fa fa-check-circle"></i><a href="../a1/preparation-a1.html">Preparation</a></li>
     <li><i class="fa-li fa fa-flask"></i><a href="../a1/lab-a1.html">Lab A1: Java and Eclipse</a></li>
   </ul>
 </li>
 </ul>
 </div>
+
+<!--
 <div class="infobox">
 <ul id="menu">
   <li>
@@ -21,6 +22,20 @@
   <ul class="fa-ul">
     <li><i class="fa-li fa fa-check-square"></i><a href="../a2/preparation-lab2.html">Preparation</a></li>
     <li><i class="fa-li fa fa-check-square"></i><a href="../a2/lab-a2.html">Lab A2: Moving Malcom</a></li>
+  </ul>
+</li>
+</ul>
+</div>
+-->
+
+<div class="infobox">
+<ul id="menu">
+  <li>
+  <b>Result Table</b><br/>
+  To have an overview how far you come and which exercises are too easy or too hard, we made a big table where
+  you can report your status. Whenever you worked on a task, update the table in the column for your team.
+  <ul class="fa-ul">
+    <li><i class="fa-li fa fa-list-alt"></i><a href="https://docs.google.com/spreadsheets/d/1zx8rIQYPhaQy6EWdgesZ27ljLLAt1Sm04vdW8_-TtjM/edit?usp=sharing">Progress Table</a></li>
   </ul>
 </li>
 </ul>
@@ -59,4 +74,7 @@
 
 </ul>
 </div>
+
+
+
 -->

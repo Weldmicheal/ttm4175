@@ -171,13 +171,15 @@ a.active {
 element.style {
 }
 
-div.infobox {
-background-color: #f1ece0;
-border-top-color: #e7dfcc;
+div.infobox { /* blue */
+background-color: #dce2ed;
+border-top-color: #7a96bf;
+/* brown */
+/*background-color: #f1ece0;
+border-top-color: #e7dfcc;*/
 border-top: 7px solid #e7dfcc;
 padding: 2px 10px 2px 10px;
 margin: 0px 0px 0px 0px;
-/*background: #dce2ed;*/
 overflow: hidden;
 }
 
