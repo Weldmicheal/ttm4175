@@ -5,8 +5,9 @@
   <ul class="fa-ul">
     <li><i class="fa-li fa fa-book"></i><a href="../a1/programming.html">Programming</a></li>
     <li><i class="fa-li fa fa-book"></i><a href="../a1/eclipse.html">Eclipse</a></li>    
-    <li><i class="fa-li fa fa-check-square"></i><a href="../a1/java-tools.html">Java Tools</a></li>
-    <li><i class="fa-li fa fa-book"></i><a href="../a1/java-language.html">Java Language</a></li>
+    <li><i class="fa-li fa fa-book"></i><a href="../a1/java-tools.html">Java Tools</a></li>
+    <li><i class="fa-li fa fa-book"></i><a href="../a1/java-language.html">Java Language, Part 1</a></li>
+    <li><i class="fa-li fa fa-book"></i><a href="../a1/java-language-2.html">Java Language, Part 2</a></li>
     <li><i class="fa-li fa fa-check-circle"></i><a href="../a1/preparation-a1.html">Preparation</a></li>
     <li><i class="fa-li fa fa-flask"></i><a href="../a1/lab-a1.html">Lab A1: Java and Eclipse</a></li>
   </ul>

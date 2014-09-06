@@ -41,6 +41,7 @@ th {
 }
 a {
     color: #0E2C8E;
+    text-decoration: underline;
 }
 a:hover {
     color: #0050a3;
@@ -173,11 +174,10 @@ element.style {
 
 div.infobox { /* blue */
 background-color: #dce2ed;
-border-top-color: #7a96bf;
+border-top: 7px solid #7a96bf;
 /* brown */
 /*background-color: #f1ece0;
 border-top-color: #e7dfcc;*/
-border-top: 7px solid;
 padding: 2px 10px 2px 10px;
 margin: 0px 0px 0px 0px;
 overflow: hidden;

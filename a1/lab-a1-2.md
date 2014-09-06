@@ -6,13 +6,13 @@ title:  Java Exercises
 ## Java Collections
 
 **Task:**
-Read the documentation for the [list] and the [set] interfaces. Both are collections of objects. State briefly in your own words what the most important differences between the two are.
+Read the documentation for the [list] and the [set] interfaces. Both are collections of objects. State briefly in your own words what the most important differences between lists and sets are.
 
 [list]: http://docs.oracle.com/javase/8/docs/api/index.html?java/util/List.html
 [set]: http://docs.oracle.com/javase/8/docs/api/index.html?java/util/Set.html
 
 **Task:**
-Name a couple of examples for cases where you would use lists and where you would use sets.
+Thinks of a couple of examples for cases where you would use lists and where you would use sets.
 
 **Task:**
 Why does the method `java.util.Collections.sort(List)` only accept lists as arguments, not sets?
