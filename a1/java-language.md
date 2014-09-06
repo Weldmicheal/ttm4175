@@ -4,29 +4,13 @@ title:  Java Language
 ---
 
 
-# Java Language
+# The Java Language
 
-We will first discuss the functional aspects of Java, then learn about objects.
+In this lecture, we will learn some parts of the Java language to program very simple applications.
 
 ## The Main Method
 
-Whenever a Java program is started, the virtual machine executed it main method. This method is declared in the following way:
-
-    public static void main(String[] args) {
-        ...
-    }
-
-This may look overwhelming at the first glance. Here is what the different keywords and letters mean:
-
-* Between the curly braces {...} resides the method body. It contains all the logic that is executed when the method is called.
-* **public** means that this method can be called also from code outside the package declaration of this class. When the virtual machine calls this method, it calls it from outside of the package.
-* **static** means that this method does not require an object to be instantiated, it can be executed with only referring to the class.
-* **void** means that the method does not return any value.
-* **String[] args** is the parameter that is passed to the method. String is a data type, and the square brackets mean that the argument is an array of strings. Within the body of the method, we can refer to the arguments by the name **args**.   
-
-All of these elements will get clearer when we look in more detail to the different concepts.
-
-Java is object-oriented. We will later see, what this means. For now, knowing that helps us to accept that the main method needs to be declared inside something called a class. Don't bother too much about this for now. To declare a main method, we need a class. This class is defined in a file that shares the same name as the class. For now, we call that class Main. The entire file will then look as the following:
+Whenever we want to create a program, it needs to be declared into something that is called a class. This class is defined in a file that has the same name as that class. For now, we call that class `Main`. The entire file will then look as the following:
 
     package ttm4175;
     
@@ -38,19 +22,35 @@ Java is object-oriented. We will later see, what this means. For now, knowing th
         
     }
 
-As you see, we have also declared a package, called ttm4175. Packages are simply a way to group related classes together. All Java classes should be sorted into a package. 
+As you see, we have also declared a package, called `ttm4175`. Packages are simply a way to group related classes together. All Java classes should be sorted into a package. 
 
-To keep package names unique, they are sometimes built up like web addresses. For instance, there is the Apache Camel project. Code within that project is organized as packages that start with org.apache.camel. 
+To keep package names unique, they are sometimes built up like web addresses. For instance, there is the Apache Camel project. Code within that project is organized as packages that start with `org.apache.camel`. 
 
-Java itself defines packages that contain classes. These packages start with java. For instance, java.utils contains a lot of code for lists and other data structures. (So packages do not *need* to correspond to web addressed.) 
+Java itself defines packages that contain classes. These packages start with `java`. For instance, `java.utils` contains a lot of code for lists and other data structures. (So packages do not *need* to correspond to web addressed.) 
 
-The name of our class is Main. With *fully qualified name* we refer to the name of the class with the package added as prefix. The fully qualified name of our class is ttm4175.Main.
+The name of our class is `Main`. With *fully qualified name* we refer to the name of the class with the package added as prefix. The fully qualified name of our class is `ttm4175.Main`.
 
-The packages also organize how the Java file is stored. The class with the fully qualified name ttm4175.Main must be stored within a file called Main.java, and stored in a folder called ttm4175. If it is stored somewhere else, we will not be able to execute it.
+The packages also organize how the Java file is stored. The class with the fully qualified name `ttm4175.Main` must be stored within a file called `Main.java`, and stored in a folder called `ttm4175`. If it is stored somewhere else, we will not be able to execute it.
+
+Whenever a Java program is started, the virtual machine executed it main method. This method is declared in the following way:
+
+    public static void main(String[] args) {
+        ...
+    }
+
+This may look overwhelming at the first glance. Here is what the different keywords and letters mean:
+
+* Between the curly braces {...} resides the method body. It contains all the logic that is executed when the method is called.
+* **public** means that this method can be called also from code outside the package declaration of this class. When the virtual machine calls this method, it calls it from outside of the package.
+* **static** means that we can call this method of class Main without first creating a new object of class Main. 
+* **void** means that the method does not return any value.
+* **String[] args** is the parameter that is passed to the method. String is a data type, and the square brackets mean that the argument is an array of strings. Within the body of the method, we can refer to the arguments by the name **args**.   
+
+All of these elements will get clearer when we look in more detail to the different concepts.
 
 ## Back to Hello World
 
-We can the message *Hello World!* to the console with the following statement, which we add into the main method: 
+We can print the message *Hello World!* to the console with the following statement, which we add into the main method: 
 
     public static void main(String[] args) {
         System.out.println("Hello World!");            
@@ -60,28 +60,54 @@ We can the message *Hello World!* to the console with the following statement, w
 * This method is defined as part of a class. This class is made available via a variable *out* that is declared within the class *System*. Therefore, we call the method with **System.out** as prefix.
 * The simple brackets **()** are part of the method call and embrace any arguments that we pass to the method.
 * **"Hello World!"** is the declaration of the String that we want to print out. Everything between the quotation marks (" ") is part of that string.
+* The semicolon `;` is used after most statements. It can be tricky to place them correctly when you begin learning Java, but after a while you will not have a problem with it. If you want to know more about the semicolon, read [this blog post][semicolon] explaining a bit more.
 
+[semicolon]: http://beginwithjava.blogspot.no/2008/06/those-pesky-semicolons.html
 
 ## Variables and Primitive Types
 
-The types byte, short, int, long are representations of signed numbers. They differ in the number of bits that are used to represent them. Bytes have 8 bits, and they can represent values from -128 to 127. Shorts have 16 bits, and can therefore range from -32,768 to 32,767. Integers have 32 bits, and range from -2^31 to 2^31-1. Longs have 64 bit, and range from -2^63 to 2^63-1.
+The types byte, short, int, long are representations of signed numbers. *Signed* means that they can be negative or positive. The different types differ in the number of bits that are used to represent them. Bytes have 8 bits, and they can represent values from -128 to 127. Shorts have 16 bits, and can therefore range from -32,768 to 32,767. Integers have 32 bits, and range from -2^31 to 2^31-1. Longs have 64 bit, and range from -2^63 to 2^63-1.
 
 The types float and double are used to represent numbers with a floating point. 
 
-Chars represent letters. They are a 16-bit Unicode character.
+Chars represent letters, like `a` or `*`. They are a 16-bit Unicode character.
 
-http://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html
+You can learn more about types [here][types].
+
+[types]: http://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html
+
+Let's run the following code:
 
     char letter = 'a';
-    System.out.println("Letter: " + letter)
+    System.out.println("Letter: " + letter);
     
     int number = 2;
-    System.out.println("Number: " + number)
+    System.out.println("Number: " + number);
 
     boolean flag = true;
-    System.out.println("Flag: " + flag)
+    System.out.println("Flag: " + flag);
     
-Let's do some more interesting stuff:    
+The output is like this:
+
+    Letter: a
+    Number: 2
+    Flag: true
+    
+## Strings
+
+Like the primitive types above, Strings are fundamental types that we need in most applications. Technically, they are not primitive types, but defined by the class `java.lang.String`. Whenever we work on strings, we work on objects. But we'll wait with objects for now. 
+
+We can declare a variable for a String like this:
+
+    Sting hello = "Hello";
+
+Here we already assign a value to it, it is the word *Hello*. We have already seen how to print a string to the console:
+
+    System.out.println(hello);
+    
+Note that we print here the value within the variable `hello`. 
+
+But let's do some more interesting stuff:    
 
     // add two numbers together
 	int a = 5;
@@ -90,7 +116,72 @@ Let's do some more interesting stuff:
 	String result = "Adding " + a + " and " + b + " is " + c;
 	System.out.println(result);
     
-We declare two integer variables, a and b. Then we declare a third variable, c, and assign it the value a+b. So for numbers, '+' really means addition. After that, we create a string named result. This string is created from several smaller strings, which are combined with the '+' operator. For strings, the '+' means concatenation. The result is a single string that we print out.
+The output:
+
+    Adding 5 and 3 is 8
+    
+What's happening here: We declare two integer variables, a and b. Then we declare a third variable, c, and assign it the value a+b. So for numbers, '+' really means addition. After that, we create a string named result. This string is created from several smaller strings, which are combined with the '+' operator. For strings, the '+' means concatenation. The result is a single string that we print out.
+
+## Arrays
+
+Whenever we want to work on several values of the same time, we can use an array.
+
+An array can hold a fixed number of values. For instance, we can create an array of integers:
+
+    int[] myIntegers;
+
+At this point, we have only declared that the variable `myIntegers` will hold an array of integers. We have not yet created the array. To create it, we use the following statement:
+
+    myIntegers = new int[10];
+
+When we create the array, we have to declare how many elements the array should have. This is the length of the array. Once the array is created with a certain length, it cannot be changed.
+
+All the elements of the array have an index number. **The index starts with 0.** So, the first element of the array has index 0. And if the array has 10 elements, the index of the last element is 9.
+
+To set the values of certain elements, we refer to their index:
+
+    myIntegers[0] = 100;
+    myIntegers[9] = 900;
+
+We can access the values in a similar way:
+
+    int x = myIntegers[0];
+    // x is now 100
+    System.out.println(x);
+
+Let's print all value of the array:
+
+    System.out.println("Value at index 0 is: " + myIntegers[0]);
+    System.out.println("Value at index 1 is: " + myIntegers[1]);
+    System.out.println("Value at index 2 is: " + myIntegers[2]);
+    System.out.println("Value at index 3 is: " + myIntegers[3]);
+    System.out.println("Value at index 4 is: " + myIntegers[4]);
+    System.out.println("Value at index 5 is: " + myIntegers[5]);
+    System.out.println("Value at index 6 is: " + myIntegers[6]);
+    System.out.println("Value at index 7 is: " + myIntegers[7]);
+    System.out.println("Value at index 8 is: " + myIntegers[8]);
+    System.out.println("Value at index 9 is: " + myIntegers[9]);
+
+(We will later see how we do that much more elegant with a loop.)
+When we run the program, we get the following output:
+
+    Value at index 0 is: 100
+    Value at index 1 is: 0
+    Value at index 2 is: 0
+    Value at index 3 is: 0
+    Value at index 4 is: 0
+    Value at index 5 is: 0
+    Value at index 6 is: 0
+    Value at index 7 is: 0
+    Value at index 8 is: 0
+    Value at index 9 is: 900
+
+We have only set the first and the last value. The other values are `0`, which is the default value of an integer when we do not assign a value to it.
+
+You can learn more about arrays [here][arrays].
+
+[arrays]: http://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html
+
 
 
 ## More Stuff to Do
@@ -139,7 +230,9 @@ So the output of this code is the following:
     8
     9
 
-http://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html
+You can learn more about the while loop [here][while].
+
+[while]: http://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html
 
 ## For Loops
 
@@ -154,9 +247,21 @@ Following the keyword for are the control sequence...
         System.out.println("i = " + i);
     }  
     
-The for loop can declare a variable, a condition that must hold while repeating, and a statement that is executed each time the loop is executing another repetition.    
+The for loop can declare a variable, a condition that must hold while repeating, and a statement that is executed each time the loop is executing another repetition. 
 
-http://docs.oracle.com/javase/tutorial/java/nutsandbolts/for.html
+
+Let's go back to the array from above. We can also loop over all elements of an array:
+
+    for(int i=0; i<myIntegers.length; i++) {
+        System.out.println("Value at index " + i + " is: " + myIntegers[i]);
+    }
+    
+With `myIntegers.length`we get the length of the array, which is 10 in the example. We use this as the upper value. (Note that we use `x<myIntegers.length`, this means we do run the loop with x=9 as last value.)
+
+You can learn more about the for loop [here][for].
+
+[for]: http://docs.oracle.com/javase/tutorial/java/nutsandbolts/for.html
+
 
 ## If Statements
 
@@ -178,22 +283,22 @@ If statements are for branching depending on a condition. An if statement looks 
 	System.out.println("A random number between 0.0 and 1.0: " + random); 
     if(random > 0.8) {
 		System.out.println("Random number is larger than 0.5!");
-	} else if (random <0.3) {
+	} else if (random \<0.3) {
 		System.out.println("Random number is smaller than 0.3!");
 	} else {
 		System.out.println("Random number is between 0.3 and 0.5!");
 	}
+    
+You can learn more about if statements [here][if].
 
-http://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html
+[if]: http://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html
 
 ### Switch Statements
 
 http://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html
 
 
-### Arrays
 
-http://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html
 
 ### Operators
 
