@@ -26,7 +26,6 @@ The elements in the list are added in a certain order. Manipulate the sequence o
 ## Morse Code Map
 
 
-
     a .-      j .---   s ...
     b -...    k -.-    t -
     c -.-.    l .-..   u ..- 
@@ -50,14 +49,6 @@ http://runeberg.org/peergynt/1a.html
 
 **Task**
 The array of Strings `SECRET` contains a number of Strings. Each of them is a sequence of morse signs that make a word. The signs are separated by a whitespace character " ". 
-
-    StringTokenizer st = new StringTokenizer("we have to work with what we have");
-	while(st.hasMoreElements()) {
-		String word = st.nextToken();
-		System.out.println(word);
-	}
-		
-		
 
 **Task**
 Another way to decode Morse signals into letters is via Dichotomic search, as shown at the end of http://en.wikipedia.org/wiki/Morse_code. Implement a method that uses this method of decoding morse signals, and use it for the transmission above.   

@@ -91,31 +91,31 @@ As illustration we use a simple [bicycle example] from the Java tutorial.
 
     class Bicycle {
 
-    int cadence = 0;
-    int speed = 0;
-    int gear = 1;
+        int cadence = 0;
+        int speed = 0;
+        int gear = 1;
+        
+        void changeCadence(int newValue) {
+             cadence = newValue;
+        }
 
-    void changeCadence(int newValue) {
-         cadence = newValue;
-    }
+        void changeGear(int newValue) {
+             gear = newValue;
+        }
 
-    void changeGear(int newValue) {
-         gear = newValue;
-    }
+        void speedUp(int increment) {
+             speed = speed + increment;   
+        }
 
-    void speedUp(int increment) {
-         speed = speed + increment;   
-    }
-
-    void applyBrakes(int decrement) {
-         speed = speed - decrement;
-    }
-
-    void printStates() {
-         System.out.println("cadence:" +
-             cadence + " speed:" + 
-             speed + " gear:" + gear);
-    }
+        void applyBrakes(int decrement) {
+             speed = speed - decrement;
+        }
+    
+        void printStates() {
+            System.out.println("cadence:" 
+                + cadence + " speed:" 
+                + speed + " gear:" + gear);
+        }
     }
 
 The declaration above is a class. We have not created any object from the class. This means that there exists no bicycle in memory yet. 
@@ -147,117 +147,69 @@ So now, our application has created two objects of type Bicycle. This also means
         bike2.printStates();
     }
 
-After the creation of the objects with new, we use the methods defined in Bicycle to work on their data. To invoke the method, we write the name of the variable, a dot, and then the method name that should be invoked, together with the argument.
+After the creation of the objects with new, we use the methods defined in Bicycle to work on their data. To invoke the method, we write the name of the variable, a dot, and then the method name that should be invoked, together with the argument. The output of this test prints the ending pedal cadence, speed, and gear for the two bicycles:
 
     cadence:50 speed:10 gear:2
     cadence:40 speed:20 gear:3
 
-The output of this test prints the ending pedal cadence, speed, and gear for the two bicycles:
 
 ## Constructors
+
+With constructors, we can control the state of an object when we create it. 
+The constructor of a class is called when we create a new object of it (with keyword `new`). It can have arguments, so that the new instance of the object is initialized with specific values.
+
+The bicycle examples above did not use a specific constructor for the bikes. Therefore, we created new bikes in the following way:
+
+    Bicycle bike1 = new Bicycle();
+    Bicycle bike2 = new Bicycle();
+
+But what if we would like to create bikes that have different properties? Let's assume that our bikes have not only cadence, speed and gear. We can add also a color and the name of the cyclist. If we want that these values are set right from the beginning og the object's life time, we can set them when we create the objects:
+
+    Bicycle bike1 = new Bicycle("red", "Peter");
+    Bicycle bike2 = new Bicycle("blue", "Mike");
+
+For this to work, we have to add a constructor to the original class Bicycle:
+
+    class Bicycle {
+
+        int cadence = 0;
+        int speed = 0;
+        int gear = 1;
+        String color;
+        String cyclist;
+        
+        public Bicycle(String c1, String c2) {
+            color = c1;
+            cyclist = c2;
+        }
+        
+        void changeCadence(int newValue) {
+             cadence = newValue;
+        }
+
+        void changeGear(int newValue) {
+             gear = newValue;
+        }
+
+        void speedUp(int increment) {
+             speed = speed + increment;   
+        }
+
+        void applyBrakes(int decrement) {
+             speed = speed - decrement;
+        }
+    
+        void printStates() {
+            System.out.println("cadence:" 
+                + cadence + " speed:" 
+                + speed + " gear:" + gear);
+        }
+    }
+
+When we create the instances with the color and the name of the cylists as above, we set the values of the variables color and cyclist of the bicycles to the corresponding values. There is nothing special with these variables, they work like the others, but they have an initial value (other than their default value) right from the object's creation.
 
 
 You can read more about objects and classes [here][oo].
 
 [oo]: http://en.wikipedia.org/wiki/Object-oriented_programming
 
-## Other Language Features
-
-**Reflection:** A Java program can analyze a type during runtime. For example, you can check if a class has a certain method implemented, and invoking that method.
-
-**Inner Classes:** All data types in Java (apart from the built-in primitives) are defined by classes. With inner classes, you can declare classes also *within* another class, as a helper construct.
-
-**Assertions:** Assertions are statements in the program that make a claim that something is true. 
-
-     assert numerOfLeaves > 0;
-
-
-Here, for instance, we assert that a certain variable is larger than zero. This is helpful for developers, because after the assert statement we do not have to take the case into account that the numberOfLeaves is zero or smaller. In case the assertion does not evaluate to true, the line throws an AssertionException. 
-
-**Generics:** A list, for instance, can hold any type of object. That is why the method to add a new element to the list has the signature `add(Object o)` This also means that when we retrieve an element from a list, we only know that it is an object. We have to cast it into a specific class if we want to invoke any methods on it that are defined by that class.
-
-With generics, we can declare that the list contains only objects of a certain type. 
-
-**Annotations:**
-
-
-**Autoboxing:**
-
-**Enumerations:**
-
-Enumerations can define a data type that consist of a set of predefined constants. For instance, we can define a day as follows:
-
-    public enum Day {
-        SUNDAY, MONDAY, TUESDAY, WEDNESDAY,
-        THURSDAY, FRIDAY, SATURDAY 
-    }
-    
-Another solution would be to encode a day as an integer, and having a convention that sunday=0, monday=1, and so on. By defining enumerations, we have several benefits:
-
-* they can be part of a switch statement, and the compiler can check if we distinguish all cases
-* makes programs more expressive, and type save
-* easier to debug
-* enumerations can also define methods and variables. we can realize anything that would fit into a table, as long as the entires in the table are constant.
-
-http://docs.oracle.com/javase/tutorial/java/javaOO/enum.html    
-
-**Varargs:**
-
-**For Each Loops:**
-
-**Lambda Expressions:**
-
-http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Lambda-QuickStart/index.html
-
-**Streams:**
-
-http://en.wikipedia.org/wiki/MapReduce
-
-## Java Keywords
-
-Some keywords are used for several different functions. The keyword *static*, for instance, can be used to declare static variables,  inner static classes and static imports. Since this is only an introduction, we will in the following learn only the *main* or *most important* function of that keyword. 
-
-Creating and referring to objects:
-
-    new, super, this
-
-Importing and declaration of packages:
-
-    import, package
-
-To flag final or static variables and methods:
-
-    final, static 
-
-To manage return types of methods:
-
-    return, void
-
-To manage the visibility of types and variables:
-    
-    private, protected, public
-
-Declaration of classes, interfaces, enumerations:
-    
-    class, enum, extends, implements, interface
-
-Program control flow:
-    
-    break, case, continue, default, do, else, for, if, switch, while
-
-Exception handling:
-
-    catch, throw, throws, try 
-
-Primitive types: 
-    
-    boolean, byte, char, double, float, int, long, short
-
-Literal values:
-
-    false, null, true
-
-
-We will ignore the following:
-    
-    abstract, continue, instanceof, finally, native, strictfp, synchronized, transient, volatile, const, goto

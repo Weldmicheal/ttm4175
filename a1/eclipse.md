@@ -25,9 +25,13 @@ Eclipse is a development environment. It started originally as a pure Java devel
 Understanding all features of Eclipse will take more time than we have. In the following, we only focus on the most important ones to get started with Java programming. There are many sources to learn more about Eclipse. 
 Here are some that can give you a further introduction:
 
-* http://eclipsetutorial.sourceforge.net/index.html
-* http://eclipsetutorial.sourceforge.net/Total_Beginner_Companion_Document.pdf
-* http://www.csee.umbc.edu/courses/undergraduate/341/fall08/Lectures/Eclipse/intro-to-eclipse.pdf
+* [Eclipse Video Tutorials] by Mark Dexter. 
+* [Eclipse And Java For Total Beginners Companion Tutorial Document] (PDF) by Mark Dexter
+* [Introduction to Eclipse] (PDF, slides) from UMBC Maryland
+
+[Eclipse Video Tutorials]: http://eclipsetutorial.sourceforge.net/index.html
+[Eclipse And Java For Total Beginners Companion Tutorial Document]: http://eclipsetutorial.sourceforge.net/Total_Beginner_Companion_Document.pdf
+[Introduction to Eclipse]: http://www.csee.umbc.edu/courses/undergraduate/341/fall08/Lectures/Eclipse/intro-to-eclipse.pdf
 
 Eclipse is itself a Java program. It is also possible to develop Java without a development environment, just using a simple text editor and the compiler from the command line. But since it is much easier to get started in a development environment, we start with Eclipse right away. There are also other development environments for Java, for instance [Netbeans] and [IntelliJ IDEA].
 
@@ -39,13 +43,13 @@ Eclipse is itself a Java program. It is also possible to develop Java without a 
 
 After you installed Eclipse and start it for the first time, you will see the welcome page. You can close this page in the upper right corner, with the button labelled "Workbench".
 
-![Alt text](images/welcome.png)
+![Closing the Welcome Page](images/welcome.png)
 
 The Eclipse **workbench** is the set of windows where you are going to work. The main window is usually the **editor**, where you edit files. There are different types of editors that are specialized for different types of files. The other windows are called **views**. These views show additional information, for instance an overview of your files or a console.
 
 The views and editors are arranged in a particular way that supports a certain task. This arrangement is preconfigured, and these configurations are called **perspectives**. For programming in Java, open the **Java perspective**. You can see in the upper right corner which perspective is currently selected. 
 
-![Alt text](images/perspective.png)
+![The Java Perspective](images/perspective.png)
 
 If the Java perspective is not already opened, you can open it:
 
@@ -79,7 +83,7 @@ When you create a new Eclipse project, you can select the type of project. When 
 * Give the project a name, for instance *ttm4175*
 * The project will be created in the default location (the folder within the workspace folder on your hard disk) and with the default settings for Java projects. These defaults are good for us, so leave them as they are and select **Finish**.
 
-![Alt text](images/new-project.png)
+![New Project Wizard](images/new-project.png)
 
 (In the screenshot, you see that for the JRE, Java 8 is selected. Since we ask you to install Java 7, this will be different in your case. Simply leave the JRE value at its default, for the Hello World it will work anyways.)
 
@@ -87,14 +91,14 @@ When you create a new Eclipse project, you can select the type of project. When 
 
 After creating the Java project, it will show up in the Package explorer view.
 
-![Alt text](images/new-project-view.png)
+![New Project in the Package Explorer](images/new-project-view.png)
 
 The source folder, called *src* will contain all our Java source files. Since we have not created any source code yet, it is empty. So let's create a new class:
 
 * Right-click the *src*-folder
 * Select New / Class
 
-![Alt text](images/new-class-wizard.png)
+![New Class Wizard](images/new-class-wizard.png)
 
 The class needs a name. We call it *HelloWorld*, and enter it in the field labelled *Name:*. The package in which we are going to create the class is already called the same as the project, that is *ttm4175*. 
 
@@ -102,7 +106,7 @@ Since we want to execute that class, we also need a main method. Therefore, we c
 
 Click finish, and the following class will be created:
 
-![Alt text](images/new-class-editor.png)
+![Java Editor with the New Class](images/new-class-editor.png)
 
 ## Hello World
 
@@ -123,7 +127,7 @@ In Eclipse, we can directly run Java programs:
 
 The console view will open, and you will see the following output:
 
-![Alt text](images/console-hello-world.png)
+![Console with Output for Hello World](images/console-hello-world.png)
 
 
 We have just created and started our fist Java application!

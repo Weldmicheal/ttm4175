@@ -125,7 +125,6 @@ What's happening here: We declare two integer variables, a and b. Then we declar
 ## Arrays
 
 Whenever we want to work on several values of the same time, we can use an array.
-
 An array can hold a fixed number of values. For instance, we can create an array of integers:
 
     int[] myIntegers;
@@ -190,13 +189,15 @@ We have seen that we can use System.out.println() to write something to the cons
 
 	// get the current time
 	long milliseconds = System.currentTimeMillis();
-	System.out.println("Milliseconds since 1 January 1970 00:00:00: " + milliseconds);
+	System.out.println("Milliseconds since 1 January 1970 00:00:00: " 
+        + milliseconds);
 		
 The class Math provides many mathematical operations:
         
 	// get a random number
 	double random = Math.random();
-    System.out.println("A random number between 0.0 and 1.0: " + random);
+    System.out.println("A random number between 0.0 and 1.0: " 
+        + random);
 
 
 ## While Loops
@@ -253,7 +254,8 @@ The for loop can declare a variable, a condition that must hold while repeating,
 Let's go back to the array from above. We can also loop over all elements of an array:
 
     for(int i=0; i<myIntegers.length; i++) {
-        System.out.println("Value at index " + i + " is: " + myIntegers[i]);
+        System.out.println("Value at index " + i + " is: " 
+            + myIntegers[i]);
     }
     
 With `myIntegers.length`we get the length of the array, which is 10 in the example. We use this as the upper value. (Note that we use `x<myIntegers.length`, this means we do run the loop with x=9 as last value.)
@@ -279,17 +281,15 @@ If statements are for branching depending on a condition. An if statement looks 
 * There can be any number of else-if branches, which are selected if their condition is true and none of the conditions of the previous above is true. 
 * The else-branch (without condition) can come as last branch and is optional. It is taken if none of the other branches is taken.
 
-{% highlight java %}
-double random = Math.random();
-System.out.println("A random number between 0.0 and 1.0: " + random); 
-if(random > 0.8) {
-	System.out.println("Random number is larger than 0.5!");
-} else if (random <0.3) {
-	System.out.println("Random number is smaller than 0.3!");
-} else {
-	System.out.println("Random number is between 0.3 and 0.5!");
-}
-{% endhighlight %}   
+    double random = Math.random();
+    System.out.println("A random number between 0.0 and 1.0: " + random); 
+    if(random > 0.8) {
+    	System.out.println("Random number is larger than 0.5!");
+    } else if (random <=0.3) {
+    	System.out.println("Random number is smaller than 0.3!");
+    } else {
+	    System.out.println("Random number is between 0.3 and 0.5!");
+    }
     
 You can learn more about if statements [here][if]. Another statement that can be used similarly to the if statement is the [switch statement]: For now, we leave it out.
 
