@@ -281,16 +281,18 @@ If statements are for branching depending on a condition. An if statement looks 
 * There can be any number of else-if branches, which are selected if their condition is true and none of the conditions of the previous above is true. 
 * The else-branch (without condition) can come as last branch and is optional. It is taken if none of the other branches is taken.
 
-    double random = Math.random();
-    System.out.println("A random number between 0.0 and 1.0: " + random); 
-    if(random > 0.8) {
-    	System.out.println("Random number is larger than 0.5!");
-    } else if (random <=0.3) {
-    	System.out.println("Random number is smaller than 0.3!");
-    } else {
-	    System.out.println("Random number is between 0.3 and 0.5!");
-    }
-    
+```
+double random = Math.random();
+System.out.println("A random number between 0.0 and 1.0: " + random); 
+if(random > 0.8) {
+	System.out.println("Random number is larger than 0.5!");
+} else if (random <=0.3) {
+	System.out.println("Random number is smaller than 0.3!");
+} else {
+    System.out.println("Random number is between 0.3 and 0.5!");
+}
+```
+
 You can learn more about if statements [here][if]. Another statement that can be used similarly to the if statement is the [switch statement]: For now, we leave it out.
 
 [if]: http://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html
