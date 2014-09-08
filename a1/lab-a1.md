@@ -16,7 +16,7 @@ title:  Java Exercises
 ## Java Keyword Piles
 
 **Task A1.2:**
-Print the [cards with the Java keywords], and cut them out. Shuffle the cards and pile them up. Draw cards from the pile and assign them to one of the keyword groups. Discuss for each keyword group what it is used for.
+Print the [cards with the Java keywords], and cut them out. Shuffle the cards and pile them up. Draw cards from the pile and assign them to one of the keyword groups. Discuss for each keyword group what it is used for. If you don't know what a keyword is used for, try to find out via a brief web search, or put it aside. (Some concepts were not yet discussed in class.)
 
 [cards with the Java keywords]: https://dl.dropboxusercontent.com/u/830148/ttm4175/keyword-piles.pdf
 

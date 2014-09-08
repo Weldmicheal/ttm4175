@@ -213,7 +213,7 @@ The following code prints the numbers from 0 to 9:
     int x = 0;
     while(x<10) {
         System.out.println("x = " + x);
-        int x = x + 1;
+        x = x + 1;
     }
     
 Within the round brackets there is the expression `x<10`. The loop is executed while this statement remains true. Within the curly braces, the statements print out the value of x, and increase x for each repetition.
