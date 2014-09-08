@@ -55,7 +55,7 @@ Have a look at the loop in method `loop2()`. Something very important is missing
 		}
 	}
 
-**Task A1.5:** What is happening here? Which statement is missing? Make a screenshot of the debug view and include it in the report.
+**Task A1.5:** What is happening here? Which statement is missing? Make a screenshot of the console view and include it in the report.
 
 **Hint:** To abort a running program, you can click the red stop button in the console view. The grey x-buttons remove the output of a program after it terminated.
 
