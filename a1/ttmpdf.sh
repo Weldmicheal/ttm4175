@@ -5,6 +5,7 @@ cat /Users/kraemer/Tools/ttm/latex-prefix.tex $1_.tex /Users/kraemer/Tools/ttm/l
 echo created tex preamble
 echo creating pdf
 /usr/texbin/pdflatex $1.tex
+/usr/texbin/pdflatex $1.tex
 # deleting extra files produced by pdflatex
 rm $1_.tex
 rm $1.tex

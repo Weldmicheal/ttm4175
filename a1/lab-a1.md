@@ -3,7 +3,7 @@ layout: default
 title:  Java Exercises
 ---
 
-# Lab A1: Java and Eclipse
+# Lab A1: Java and Eclipse (Week 1)
 
 
 ## Hello World
