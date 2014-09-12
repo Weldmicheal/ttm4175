@@ -240,8 +240,158 @@ The method below contains a complete message. It is handled as an array of strin
 http://runeberg.org/peergynt/1a.html
 -->
 
-**Task (Super-Advanced)**
+**Task (Super-Advanced):**
 Another way to decode Morse signals into letters is via Dichotomic search, as shown at the end of http://en.wikipedia.org/wiki/Morse_code. Implement a method that uses this method of decoding morse signals, and use it for the transmission above. (Try to solve this task only if you have more time and energy left at the end of the lab.)  
+
+## Book Scanning
+
+(Preliminary Version of the exercise :-)
+
+Have a look at the methods listed below:
+
+* `download(String request)` can download a string from the web, for instance to download an ebook from [Project Gutenberg].
+* `getLines(String text)` parses a string and separates it into its lines, so that we can work on them.
+* `openImage(BufferedImage image)`can open an Image.
+
+[Project Gutenberg]: http://www.gutenberg.org/
+
+	/*
+	 * Opens a window that displays the image.
+	 */
+	public static void openImage(BufferedImage image) {
+		ImageIcon icon=new ImageIcon(image);
+	    JFrame frame=new JFrame();
+	    frame.setLayout(new FlowLayout());
+	    frame.setSize(200,300);
+	    JLabel lbl=new JLabel();
+	    lbl.setIcon(icon);
+	    frame.add(lbl);
+	    frame.setVisible(true);
+	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+
+	/*
+	 * Parses the given text and returns a list of strings,
+	 * where each string is one line of the original text.
+	 */
+	public static List<String> getLines(String text) {
+		BufferedReader reader = new BufferedReader(new StringReader(text));
+		List<String> allLines = new ArrayList<String>();
+		try {
+			String line = reader.readLine();
+			while(line!=null) {
+				if(!line.trim().isEmpty()) {
+					allLines.add(line);
+					line = reader.readLine();
+				}
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return allLines;
+	}
+
+	/*
+	 * Downloads a String from a server with the specified request. 
+	 * Can be used to download the weather forecast from Yr or download
+	 * an ebook.
+	 */
+	public static String download(String request) {
+		try {
+			InputStream stream = new URL(request).openStream();
+			Scanner scanner = new Scanner(stream, "UTF-8");
+			String response = scanner.useDelimiter("\\A").next();
+			scanner.close();
+			return response;
+		} catch (IOException e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+    
+    
+So let's do something with these methods. The idea is the following:
+
+1. Download a book from Gutenberg
+2. Find out in which lines of the book the main characters of the book appear
+3. Draw a picture with this information
+
+The result for Alice in Wonderland looks like that:
+
+![Allice in Wonderland](images/book-alice.png)
+
+The red stripes are the lines in which Alice is mentioned, the green ones mention the rabbit, and the blue ones the queen. If you are remotely familiar with the book, you can confirm that this distribution og the characters makes sense. 
+
+See below the code to produce such an image:
+
+    
+    public static void main(String[] args) {
+		
+		// download a string
+		String response = download("http://www.gutenberg.org/cache/epub/1268/pg1268.txt");
+		
+		// parse the text into lines
+		List<String> allLines = getLines(response);
+
+
+		int w = 1000;
+		int h = 800;
+		int type = BufferedImage.TYPE_INT_RGB;
+
+		BufferedImage image = new BufferedImage(w, h, type);
+		Graphics2D g2d = image.createGraphics();
+
+		int n = 0;
+	    for(int column=0; column<30 && n<allLines.size(); column++) {
+	    	for(int l=0; l<600 && n<allLines.size(); l++) {
+	    		String sline = allLines.get(n);
+	    		++n;
+	    		if(sline.contains("Nemo")) {
+	    			g2d.setColor(Color.red);
+	    		} else if (sline.contains("Nautilus")) {
+	    			g2d.setColor(Color.green);
+	    		} else if (sline.contains("onseil")) {
+	    			g2d.setColor(Color.BLUE);
+	    		} else {
+	    			g2d.setColor(Color.white);
+	    		}
+	    		g2d.drawLine(column*30, l, column*30+10, l);
+	    	}
+	    }
+		
+	    g2d.dispose();
+
+		openImage(image);
+	}
+    
+
+You will need the following import statements:
+    
+    import java.awt.Color;
+    import java.awt.FlowLayout;
+    import java.awt.Graphics2D;
+    import java.awt.image.BufferedImage;
+    import java.io.BufferedReader;
+    import java.io.IOException;
+    import java.io.InputStream;
+    import java.io.StringReader;
+    import java.net.URL;
+    import java.util.ArrayList;
+    import java.util.List;
+    import java.util.Scanner;
+
+    import javax.swing.ImageIcon;
+    import javax.swing.JFrame;
+    import javax.swing.JLabel;
+
+
+**Task:**
+Search on Project Gutenberg for a book that you know (at least partially), and analyze in which lines the main characters of the book appear. Make a screenshot of the generated picture, and explain in the report which book and roles you analyzed.
+
+
+**Task:**
+Draw a picture with the methods of the graphics class onto the canvas. Try to not only use single statements that draw a single line, etc, but try to use loops and other control statements to make more complex figures.
+
 
 <!--
 

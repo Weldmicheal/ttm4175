@@ -28,3 +28,17 @@ Eclipse is the development environment that we use to program in Java. Eclipse i
 - <a href="http://reference.bitreactive.com/reference/install-eclipse-windows.html" class="wikilink1" title="install_sdk_win">Installation of Eclipse on Windows</a>
 - <a href="http://reference.bitreactive.com/reference/install-eclipse-mac.html" class="wikilink1" title="install_sdk_mac">Installation of Eclipse on Mac</a>
 - <a href="http://reference.bitreactive.com/reference/install-eclipse-linux.html" class="wikilink1" title="install_sdk_linux">Installation of Eclipse on Linux</a>   
+
+
+
+
+
+{% highlight ruby %}
+def show
+  @widget = Widget(params[:id])
+  respond_to do |format|
+    format.html # show.html.erb
+    format.json { render json: @widget }
+  end
+end
+{% endhighlight %}

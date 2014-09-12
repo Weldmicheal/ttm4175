@@ -1,5 +1,5 @@
 #!/bin/bash
-pandoc -f markdown -t latex -o $1_.tex $1.md
+pandoc -f markdown -t latex --no-highlight -o $1_.tex $1.md
 echo created tex
 cat /Users/kraemer/Tools/ttm/latex-prefix.tex $1_.tex /Users/kraemer/Tools/ttm/latex-suffix.tex > $1.tex
 echo created tex preamble

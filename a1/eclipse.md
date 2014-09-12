@@ -112,9 +112,17 @@ Click finish, and the following class will be created:
 
 To write our program, we remove the comments (the lines that are started by the comment markers "//"), and replace it with a code line that prints out a message:
 
-	public static void main(String[] args) {
-		System.out.println("Hello World!");
-	}
+~~~ java
+public static void main(String[] args) {
+	System.out.println("Hello World!");
+}
+~~~
+
+{% highlight java linenos %}
+public static void main(String[] args) {
+	System.out.println("Hello World!");
+}
+{% endhighlight %}    
 
 (We will later have a close look at all the elements in that code line.)
 
