@@ -23,7 +23,7 @@ If you are unsure how to cause such an exception, read the [documentation of thi
 Copy and paste the code into your report. Then, correct the program so that the error does not happen anymore. Copy and paste also this code into your report.
 
 **Task: (Advanced)**
-It may seem annoying that the programming language causes an exception in these cases. Why, do you think, is it better that these exceptions happen, instead of the programm just continuing as if nothing has happened?
+It may seem annoying that the programming language causes an exception in these cases. Why, do you think, is it better that these exceptions happen, instead of the program just continuing as if nothing has happened?
 
 
 ## Java Collections
@@ -243,6 +243,106 @@ http://runeberg.org/peergynt/1a.html
 **Task (Super-Advanced):**
 Another way to decode Morse signals into letters is via Dichotomic search, as shown at the end of http://en.wikipedia.org/wiki/Morse_code. Implement a method that uses this method of decoding morse signals, and use it for the transmission above. (Try to solve this task only if you have more time and energy left at the end of the lab.)  
 
+## Drawing
+
+The class `java.awt.Graphics2D` can draw simple figures on an image. 
+
+	public static void main(String[] args) {
+		
+		// create an image and the graphics object to draw on  it
+		int width = 1000;
+		int height = 1000;
+		BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+		Graphics2D g = image.createGraphics();
+
+		// draw!
+		drawStickFigure((int) (Math.random()*width), (int) (Math.random()*height), Color.blue, g);
+
+		openImage(image);
+	}
+    
+The method below can draw a simple stick figure:
+
+	public static void drawStickFigure(int x, int y, Graphics2D g) {
+		int r = 7;
+		// the head
+		g.fillOval(x-r/2, y-r/2, r, r);
+		// the body
+		g.drawLine(x, y, x, y+4*r);
+		// the arms 
+		g.drawLine(x-r, y+2*r, x+r, y+2*r);
+		// both legs
+		g.drawLine(x, y+4*r, x+r, y+5*r);
+		g.drawLine(x, y+4*r, x-r, y+5*r);
+	}
+    
+![Alt text](images/stick-figure.png)   
+
+The blue markers shows the start point x,y. The other points needed to draw the stick figure are derived
+from the start point and the variable r. The green point, for instance, is x+r, y+2r. By default, r is chosen to be 7 points. By changing the value of r, the size of the stick figure can be changed.
+
+The method `openImage(image)` opens a window and shows the image created.
+
+	/*
+	 * Opens a window that displays the image.
+	 */
+	public static void openImage(BufferedImage image) {
+		ImageIcon icon=new ImageIcon(image);
+	    JFrame frame=new JFrame();
+	    frame.setLayout(new FlowLayout());
+	    frame.setSize(image.getWidth(), image.getHeight());
+	    JLabel lbl=new JLabel();
+	    lbl.setIcon(icon);
+	    frame.add(lbl);
+	    frame.setVisible(true);
+	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+    
+The methods for drawing need the following import statements:
+
+    import java.awt.Color;
+    import java.awt.FlowLayout;
+    import java.awt.Graphics2D;
+    import java.awt.image.BufferedImage;
+    
+    import javax.swing.ImageIcon;
+    import javax.swing.JFrame;
+    import javax.swing.JLabel;
+
+**Task:**
+Use the method to print stick figures all over the image. To get random numbers, you can again use the `Math.random()` method. Note that the result of the random method must be transformed into an integer. You can do this in the following way: 
+
+    int x = (int) (Math.random()* width);
+
+Math.random() returns a double, that means a floating point value. We multiply it first with the width of the image. This results again in a floating point value. The `(int)` is rounding the floating point number into an integer. The result should look like this:
+
+![Alt text](images/stick-figures-random.png)
+
+**Task (Advanced):**
+Create a method that returns a random color, and use it to draw stick figures of different colors.  
+
+Have a look at the [documentation of Graphics] and [documentation of Graphics2D]. You'll find methods to draw different shapes. Methods that begin with *fill* draw a solid figure, methods that begin with *draw* create only their outline. To set the color, use the following method:
+
+    g.setColor(Color.GREEN);
+
+It switches the drawing color to green. Whatever is drawn after that, is drawn in green.
+You can also mix your own colors, by creating a new color object. Its constructor takes the RGB (red/green/blue) values as an integer, from 0 to 255. You can find the RGB values of colors for [here]. The blue from NTNU, for instance, is defined by RGB 14, 41, 136.
+
+    Color ntnuBlue = new Color(14, 41, 136);
+    g.setColor(ntnuBlue);
+
+
+[documentation of Graphics]: http://docs.oracle.com/javase/7/docs/api/java/awt/Graphics.html
+[documentation of Graphics2D]: http://docs.oracle.com/javase/7/docs/api/java/awt/Graphics2D.html
+[here]: http://www.rapidtables.com/web/color/RGB_Color.htm
+
+
+---
+
+
+**Task:**
+Use some methods in Graphics2D to draw a picture. Make use of loops and other control structures to draw something interesting. Include the code and the resulting image in your report. 
+
 ## Book Scanning
 
 (Preliminary Version of the exercise :-)
@@ -256,21 +356,6 @@ Have a look at the methods listed below:
 [Project Gutenberg]: http://www.gutenberg.org/
 
 	/*
-	 * Opens a window that displays the image.
-	 */
-	public static void openImage(BufferedImage image) {
-		ImageIcon icon=new ImageIcon(image);
-	    JFrame frame=new JFrame();
-	    frame.setLayout(new FlowLayout());
-	    frame.setSize(200,300);
-	    JLabel lbl=new JLabel();
-	    lbl.setIcon(icon);
-	    frame.add(lbl);
-	    frame.setVisible(true);
-	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	}
-
-	/*
 	 * Parses the given text and returns a list of strings,
 	 * where each string is one line of the original text.
 	 */
@@ -282,8 +367,8 @@ Have a look at the methods listed below:
 			while(line!=null) {
 				if(!line.trim().isEmpty()) {
 					allLines.add(line);
-					line = reader.readLine();
 				}
+				line = reader.readLine();
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
