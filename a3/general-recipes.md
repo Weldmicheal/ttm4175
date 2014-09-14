@@ -9,20 +9,19 @@ title:  General Recipes
 http://www.raspberrypi.org/documentation/
 
 
-# Installation with NOOBS
+## Installation with NOOBS
 
+NOOBS is installed on the SD-cards that follow the Pi, or can be downloaded [here][noobs].
+It makes it easy to install a GNU/Linux distribution on the Pi. Read more [here][installation].
 
-http://www.raspberrypi.org/downloads/
-
-http://raspberrypihq.com/noobs-raspberry-pi-os-installation-made-easy/
-
+[noobs]: http://www.raspberrypi.org/downloads/
+[installation]: http://raspberrypihq.com/noobs-raspberry-pi-os-installation-made-easy/
 
 * Connect the Pi to a monitor
 * Connect a keyboard and a mouse
 * Set in the SD card with NOOBS installed
 * Power up the Pi
-
-* Select the default choice, Raspbian
+* Select the default choice, **Raspbian**
 * Install
 * Reboot
 
@@ -55,7 +54,7 @@ The result can look like this:
 * add the password
 * click Add
 
-
+**Important:** Do not use your EDUROAM credentials to connect the Pi to the network. Anyone with access to the Pi can read the credentials. Instead, configure the Pi with the password for the temporary network we setup for the course. If you have no Wifi, connect the Pi via the ethernet port.
 
 
 ## Shutting Down and Rebooting Gently
@@ -105,8 +104,6 @@ http://www.raspberrypi.org/documentation/remote-access/ssh/unix.md
 
 
 
-
-
 ## Copying a File to the Raspberry Pi
 
 
@@ -122,3 +119,15 @@ For example:
 This will copy the file into the home directory (/home/pi). During the process, you will be asked for the password for the username *pi*. If you did not change anything, that password is *raspberry*.
 
 
+## Connecting the Berryclip
+
+
+Download the test program for the Berryclip with the following command:
+
+    wget http://item.ntnu.no/~kraemer/ttm4175/berrycliptest.jar
+
+Then, run it:
+
+    sudo java -jar berrycliptest.jar
+    
+The LEDs should light up one after another. After that, press the button, and you should hear a beep.
