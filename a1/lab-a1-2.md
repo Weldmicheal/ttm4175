@@ -269,7 +269,7 @@ The class `java.awt.Graphics2D` can draw simple figures on an image.
 		Graphics2D g = image.createGraphics();
 
 		// draw!
-		drawStickFigure((int) (Math.random()*width), (int) (Math.random()*height), Color.blue, g);
+		drawStickFigure((int) (Math.random()*width), (int) (Math.random()*height), g);
 
         // show the image
 		openImage(image);
