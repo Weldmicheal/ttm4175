@@ -16,19 +16,19 @@
 </ul>
 </div>
 
-<!--
+
 <div class="infobox">
 <ul id="menu">
   <li>
   <a href="#"><b>A2: Reactive Blocks</b></a>
   <ul class="fa-ul">
     <li><i class="fa-li fa fa-check-square"></i><a href="../a2/preparation-lab2.html">Preparation</a></li>
-    <li><i class="fa-li fa fa-check-square"></i><a href="../a2/lab-a2.html">Lab A2: Moving Malcom</a></li>
+    <li><i class="fa-li fa fa-flask"></i><a href="../a2/lab-a2.html">Lab A2: Moving Malcom</a></li>
   </ul>
 </li>
 </ul>
 </div>
--->
+
 
 <div class="infobox">
 <ul id="menu">
