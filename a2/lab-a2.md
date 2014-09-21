@@ -3,7 +3,7 @@ layout: default
 title:  Lab A2
 ---
 
-# Tutorial Game
+# Tutorial Game: Moving Malcom
 
 
 To learn the logic of UML activities, Øyvin Richardsen created in his master thesis from 2014 a game. In this game, you control the figure Malcom through a world and solve simple tasks.
@@ -31,7 +31,7 @@ Make sure you have joined the team for the game, as described [here].
 The import wizard is [described here]. You can select the team Tutorial Game in the combo box, and then select the project 
 **no.ntnu.oyvinric.tutorialgame.release 1.0.0** for import.
 
-[here]: preparation.html
+[here]: preparation-lab2.html
 [described here]: http://reference.bitreactive.com/reference/importing-blocks.html
 
 ![Alt text](images/import-tutorial-game.png)
@@ -71,13 +71,22 @@ Open system LevelX, and use the operations and other elements to build a solutio
 Build the systems the same way as you built the introduction to try out your solution. Adjust your design and repeat until you have solved the level.
 
 
-**Task:**
+**Tasks 2.1...2.5: **
 Try to solve each level. For each level, describe in the report how you solved it, and include a screenshot of your solution.
 
 
-## Additional Tasks: Speech Synthesis
+## Hello World
 
-In case you have time left, you can do the [speech synthesis tutorial]. In this tutorial, you learn how to use a building block for speech synthesis and let the computer talk one sentence after the other.
+**Task 2.6:**
+To get some routine how to create a new project and a new building block, do the [Hello World tutorial]. After Hello World  works, can you copy inn the method to calculate Fibonacci numbers from the first week, and print out the 10-th Fibonacci number as part of the hello world?
+
+[Hello World tutorial]: http://reference.bitreactive.com/tutorials/hello-world.html
+
+
+## Speech Synthesis
+
+**Task 2.7:**
+Do the [speech synthesis tutorial]. In this tutorial, you learn how to use a building block for speech synthesis and let the computer talk one sentence after the other.
 
 [speech synthesis tutorial]: http://reference.bitreactive.com/tutorials/speech-buffer-tutorial.html
 

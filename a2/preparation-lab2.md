@@ -29,6 +29,11 @@ To get an account, you just [sign in here] with your Google or Facebook account.
 [sign in here]: http://blocks.bitreactive.com/login/signup.html
 
 
+After you signed up, write down with which Facebook or Gmail address you registered [in this table].
+
+[in this table]: [https://docs.google.com/spreadsheets/d/15TMgbRlB8FbU4i4kp5uHpjkXRFZS_zlKnMGbwgAYNf0/edit?usp=sharing]
+
+
 ## Join the TTM4175 (2014) Team
 
 To manage which blocks you can see and download, you have to join teams. We have created a team for this course that contains all building blocks that we are going to use. 
