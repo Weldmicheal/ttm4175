@@ -31,7 +31,8 @@ To get an account, you just [sign in here] with your Google or Facebook account.
 
 After you signed up, write down with which Facebook or Gmail address you registered [in this table].
 
-[in this table]: [http://docs.google.com/spreadsheets/d/15TMgbRlB8FbU4i4kp5uHpjkXRFZS_zlKnMGbwgAYNf0/edit?usp=sharing]
+[in this table]: http://docs.google.com/spreadsheets/d/15TMgbRlB8FbU4i4kp5uHpjkXRFZS_zlKnMGbwgAYNf0/edit?usp=sharing
+
 
 
 ## Join the TTM4175 (2014) Team
