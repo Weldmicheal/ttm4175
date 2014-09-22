@@ -56,6 +56,47 @@ The result can look like this:
 
 **Important:** Do not use your EDUROAM credentials to connect the Pi to the network. Anyone with access to the Pi can read the credentials. Instead, configure the Pi with the password for the temporary network we setup for the course. If you have no Wifi, connect the Pi via the ethernet port.
 
+### Adding a Default Gateway
+
+<!-- http://raspberrypi.stackexchange.com/questions/14101/connect-network-is-unreachable-on-a-working-wlan0-connected-interface -->
+
+Even when connected to Wifi, you may now not be connected to the internet. Try the command
+
+    ping google.com
+
+As an response, you will likely get the following:
+    
+    ping: unknown host google.com
+
+Let's check the routing table for the Pi. Execute the following command on the Pi:
+
+    sudo route -n
+
+It shows the routing table:
+
+    Kernel IP routing table
+    Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+    192.168.1.0     0.0.0.0         255.255.255.0   U     0      0        0 wlan0
+    
+Add the default gateway (the wifi router):    
+    
+    sudo route add default gw 192.168.1.1
+    
+The routing table should look like this:
+
+    Kernel IP routing table
+    Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+    0.0.0.0         192.168.1.1     0.0.0.0         UG    0      0        0 wlan0
+    192.168.1.0     0.0.0.0         255.255.255.0   U     0      0        0 wlan0
+    
+Now executing the ping command should work, and you should get a response.
+
+    ping google.com
+    PING google.com (148.123.29.25) 56(84) bytes of data.
+    64 bytes from 148.123.29.25: icmp_req=1 ttl=57 time=25.5 ms
+    64 bytes from 148.123.29.25: icmp_req=2 ttl=57 time=42.8 ms
+    64 bytes from 148.123.29.25: icmp_req=3 ttl=57 time=24.3 ms
+    64 bytes from 148.123.29.25: icmp_req=4 ttl=57 time=21.6 ms
 
 ## Shutting Down and Rebooting Gently
 
