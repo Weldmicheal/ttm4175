@@ -23,23 +23,85 @@ The LEDs should light up one after another. After that, press the button, and yo
 
 ## Local Morse Code
 
+Use the Import function from the Blocks View, and import the library **Berryclip for Raspbery Pi**.
+
 **Task 1:**
 Use the Button and the Buzzer, and build a system with that you can create Morse code, just locally on your own device.
+
+![alt](images/local-morse-code.png)
 
 
 **Task 2:**
 Use the Morse Timer block. It meassures the length of the signals. With it, we can print out the `.` and `-` for each sign. 
 
-(We will later use the Morse Timer block so we can send the morse signs over the network.
+![alt](images/local-morse-code-2.png)
+
+The methods should look like this:
+
+	public void printShort() {
+		System.out.print(".");
+	}
+
+	public void printLong() {
+		System.out.print("-");
+	}
+	
+	public void printBreak() {
+		System.out.print(" ");
+	}
+
+(We will later use the Morse Timer block so we can send the morse signs over the network.)
 
 **Task 3:**
 Explain the morse timer block.
-Use the Morse Timer block. Make that each Short beep is exactly 200 ms and Each long beep 600 ms long. 
 
 
 ## Sending Morse Code to Yourself, via the Network
 
+
+
 To test the network connection, we build a system that connects the button to the buzzer not directly, but via the network.
+
+
+![alt](images/morse-code-3.png)
+
+    import com.bitreactive.library.mqtt.MQTTConfigParam;
+    import com.bitreactive.library.mqtt.MQTTMessage;
+    import com.bitreactive.library.mqtt.robustmqtt.RobustMQTT.Parameters;
+
+
+
+	public String topic;
+	public static String SHORT_MESSAGE = ".";
+	public static String LONG_MESSAGE = "-";
+	
+	public MQTTMessage createShortMessage() {
+		byte[] bytes = new String(SHORT_MESSAGE).getBytes();
+		MQTTMessage message = new MQTTMessage(bytes, topic);
+		return message;
+	}
+
+	public MQTTMessage createLongMessage() {
+		byte[] bytes = new String(LONG_MESSAGE).getBytes();
+		MQTTMessage message = new MQTTMessage(bytes, topic);
+		return message;
+	}
+
+	public String extractMessage(MQTTMessage m) {
+		return new String(m.getPayload());
+	}
+
+	public void unknownString(String s) {
+		logError("Unexpected string received: " + s);
+	}
+
+	public Parameters createSetup() {
+		MQTTConfigParam m = new MQTTConfigParam("dev.bitreactive.com");
+		topic = "t" + Math.random();
+		m.addSubscribeTopic(topic);
+		Parameters p = new Parameters(m, 5);
+		return p;
+	}
 
 Listen to the same topic as you send the messages to. 
 Make sure the topic is unique, so you do not hear the morse signals of other teams that use the same broker.

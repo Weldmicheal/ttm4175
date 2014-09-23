@@ -3,6 +3,7 @@ layout: default
 title:  General Recipes
 ---
 
+# General Recipes for the Raspberry Pi
 
 
 ## Shutting Down and Rebooting Gently
