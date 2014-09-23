@@ -3,18 +3,36 @@ layout: default
 title:  Lab A3
 ---
 
+# Programming the Raspberry Pi
 
 
-Task 1:
+
+## Testing the Berryclip
+
+Download the test program for the Berryclip with the following command:
+
+    wget http://item.ntnu.no/~kraemer/ttm4175/berrycliptest.jar
+
+The command `wget` simply downloads a given file, here a jar file. This jar file contains a Java application that uses the Berryclip. To run the program, start Java:
+
+    sudo java -jar berrycliptest.jar
+    
+The LEDs should light up one after another. After that, press the button, and you should hear a beep. (If the application does not run, something is wrong. You are officially allowed to panic.)
+
+
+
+## Local Morse Code
+
+**Task 1:**
 Use the Button and the Buzzer, and build a system with that you can create Morse code, just locally on your own device.
 
 
-Task 2: 
+**Task 2:**
 Use the Morse Timer block. It meassures the length of the signals. With it, we can print out the `.` and `-` for each sign. 
 
 (We will later use the Morse Timer block so we can send the morse signs over the network.
 
-Task 3:
+**Task 3:**
 Explain the morse timer block.
 Use the Morse Timer block. Make that each Short beep is exactly 200 ms and Each long beep 600 ms long. 
 

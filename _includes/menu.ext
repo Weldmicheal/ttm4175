@@ -29,6 +29,19 @@
 </ul>
 </div>
 
+<div class="infobox">
+<ul id="menu">
+  <li>
+  <a href="#"><b>A3: Raspberry Pi</b></a>
+  <ul class="fa-ul">
+  <li><i class="fa-li fa fa-check-circle"></i><a href="../a3/preparation.html">Preparation</a></li>
+  <li><i class="fa-li fa fa-check-circle"></i><a href="../a3/general-recipes.html">General Recipes</a></li>
+  <li><i class="fa-li fa fa-check-circle"></i><a href="../a3/java-recipes.html">Java Recipes</a></li>
+  <li><i class="fa-li fa fa-flask"></i><a href="../a3/lab.html">Lab A3: Raspberry Pi</a></li>
+  </ul>
+</li>
+</ul>
+</div>
 
 <div class="infobox">
 <ul id="menu">
@@ -59,19 +72,7 @@
 </div>
 
 <!--
-<div class="infobox">
-<ul id="menu">
-  <li>
-  <a href="#"><b>A3: Raspberry Pi</b></a>
-  <ul>
-  
-  <li><a href="../a3/general-recipes.html">General Recipes</a></li>
-  <li><a href="../a3/java-recipes.html">Java Recipes</a></li>
-  
-  </ul>
-</li>
-</ul>
-</div>
+
 <div class="infobox">
 <ul id="menu">
   <li>
