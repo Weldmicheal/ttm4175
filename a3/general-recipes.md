@@ -10,7 +10,7 @@ title:  General Recipes
 
 Just unplugging power may leave the file system corrupted. To properly shutdown, use the following commands:
 
-    sudo shutdown
+    sudo halt
   
 or, to reboot:
 

@@ -24,6 +24,7 @@ The LEDs should light up one after another. After that, press the button, and yo
 ## Local Morse Code
 
 Use the Import function from the Blocks View, and import the library **Berryclip for Raspbery Pi**.
+Also import the project **no.ntnu.ttm4175.morse**.
 
 **Task 1:**
 Use the Button and the Buzzer, and build a system with that you can create Morse code, just locally on your own device.
