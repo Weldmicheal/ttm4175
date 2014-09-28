@@ -35,8 +35,9 @@
   <a href="#"><b>A3: Raspberry Pi</b></a>
   <ul class="fa-ul">
   <li><i class="fa-li fa fa-check-circle"></i><a href="../a3/preparation.html">Preparation</a></li>
-  <li><i class="fa-li fa fa-check-circle"></i><a href="../a3/general-recipes.html">General Recipes</a></li>
-  <li><i class="fa-li fa fa-check-circle"></i><a href="../a3/java-recipes.html">Java Recipes</a></li>
+  <li><i class="fa-li fa fa-lightbulb-o"></i><a href="../a3/general-recipes.html">General Recipes</a></li>
+  <li><i class="fa-li fa fa-lightbulb-o"></i><a href="../a3/java-recipes.html">Java Recipes</a></li>
+  <li><i class="fa-li fa fa-lightbulb-o"></i><a href="../a3/mqtt.html">MQTT Tips</a></li>
   <li><i class="fa-li fa fa-flask"></i><a href="../a3/lab.html">Lab A3: Raspberry Pi</a></li>
   </ul>
 </li>
