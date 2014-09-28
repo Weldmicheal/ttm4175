@@ -6,6 +6,32 @@ title:  Lab A3
 # Programming the Raspberry Pi
 
 
+## Debugging MQTT
+
+During the lab you will send and receive messages via MQTT. To find out, if messages are sent, you can install an application that lets you subscribe to MQTT topics. In this way you will know if your application sends messages as it should. One such application is [MQTT.fx], which you can download from [here]. (Works for Mac or Windows.)
+
+[MQTT.fx]: http://www.jensd.de/wordpress/?p=1423
+[here]: http://www.jensd.de/apps/mqttfx/
+
+To use the application, simply add the MQTT broker you are using, and subscribe to the topics you are working with.
+
+
+## Using the MQTT Block
+
+### Starting Robust MQTT
+
+Name of the broker, subscribe to topics.
+
+### Sending a Message
+
+Message payload, quality of service.
+
+### Printing a Received Message
+
+Get a string from the payload
+Write the topic it was sent to
+
+
 
 ## Testing the Berryclip
 
@@ -27,15 +53,21 @@ Use the Import function from the Blocks View, and import the library **Berryclip
 Also import the project **no.ntnu.ttm4175.morse**.
 
 **Task 1:**
-Use the Button and the Buzzer, and build a system with that you can create Morse code, just locally on your own device.
+Use the Button and the Buzzer, and build a system with that you can create Morse code, just locally on your own device. Whenever you press down the button, the buzzer should beep.
 
-![alt](images/local-morse-code.png)
-
+Hint: Try to build the application on your own. If you have no idea how it should look like, have a glance [here].
+[here]: images/local-morse-code.png
 
 **Task 2:**
+Extend the system with the Button and the Buzzer, and add an LED. The LED should light up whenever the button is pressed, together with the buzzer.
+
+
+**Task 3:**
 Use the Morse Timer block. It meassures the length of the signals. With it, we can print out the `.` and `-` for each sign. 
 
-![alt](images/local-morse-code-2.png)
+Hint: Try to build the application on your own. If you have no idea how it should look like, have a glance [here].
+[here]: images/local-morse-code-2.png
+
 
 The methods should look like this:
 
@@ -53,18 +85,22 @@ The methods should look like this:
 
 (We will later use the Morse Timer block so we can send the morse signs over the network.)
 
-**Task 3:**
-Explain the morse timer block.
+<!--**Task 3:**
+Explain the morse timer block.-->
 
 
 ## Sending Morse Code to Yourself, via the Network
 
 
-
 To test the network connection, we build a system that connects the button to the buzzer not directly, but via the network.
 
 
-![alt](images/morse-code-3.png)
+**Task:**
+
+
+Hint: Try to build the application on your own. If you have no idea how it should look like, have a glance [here].
+[here]: images/morse-code-3.png
+
 
     import com.bitreactive.library.mqtt.MQTTConfigParam;
     import com.bitreactive.library.mqtt.MQTTMessage;
