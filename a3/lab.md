@@ -8,9 +8,9 @@ title:  Lab A3
 
 ## Debugging MQTT
 
-During the lab you will send and receive messages via MQTT. To find out, if messages are sent, you can install an application that lets you subscribe to MQTT topics. In this way you will know if your application sends messages as it should. One such application is [MQTT.fx], which you can download from [here]. (Works for Mac or Windows.)
+During the lab you will send and receive messages via MQTT. To find out, if messages are sent, you can install an application that lets you subscribe to MQTT topics. In this way you will know if your application sends messages as it should. One such application is [MQTTfx], which you can download from [here]. (Works for Mac or Windows.)
 
-[MQTT.fx]: http://www.jensd.de/wordpress/?p=1423
+[MQTTfx]: http://www.jensd.de/wordpress/?p=1423
 [here]: http://www.jensd.de/apps/mqttfx/
 
 To use the application, simply add the MQTT broker you are using, and subscribe to the topics you are working with.
@@ -55,8 +55,9 @@ Also import the project **no.ntnu.ttm4175.morse**.
 **Task 1:**
 Use the Button and the Buzzer, and build a system with that you can create Morse code, just locally on your own device. Whenever you press down the button, the buzzer should beep.
 
-Hint: Try to build the application on your own. If you have no idea how it should look like, have a glance [here].
-[here]: images/local-morse-code.png
+Hint: Try to build the application on your own. If you have no idea how it should look like, have a glance [here][here2].
+
+[here2]: images/local-morse-code.png
 
 **Task 2:**
 Extend the system with the Button and the Buzzer, and add an LED. The LED should light up whenever the button is pressed, together with the buzzer.
@@ -65,8 +66,9 @@ Extend the system with the Button and the Buzzer, and add an LED. The LED should
 **Task 3:**
 Use the Morse Timer block. It meassures the length of the signals. With it, we can print out the `.` and `-` for each sign. 
 
-Hint: Try to build the application on your own. If you have no idea how it should look like, have a glance [here].
-[here]: images/local-morse-code-2.png
+Hint: Try to build the application on your own. If you have no idea how it should look like, have a glance [here][here3].
+
+[here3]: images/local-morse-code-2.png
 
 
 The methods should look like this:
@@ -98,8 +100,9 @@ To test the network connection, we build a system that connects the button to th
 **Task:**
 
 
-Hint: Try to build the application on your own. If you have no idea how it should look like, have a glance [here].
-[here]: images/morse-code-3.png
+Hint: Try to build the application on your own. If you have no idea how it should look like, [have a glance here].
+
+[have a glance here]: images/morse-code-3.png
 
 
     import com.bitreactive.library.mqtt.MQTTConfigParam;
