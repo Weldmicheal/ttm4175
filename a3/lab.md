@@ -37,6 +37,10 @@ Hint: Try to build the application on your own. If you have no idea how it shoul
 Extend the system with the Button and the Buzzer, and add an LED. The LED should light up whenever the button is pressed, together with the buzzer.
 Take a screenshot of the application, and explain how it works.
 
+Hint:
+
+* You can easily duplicate building blocks by selecting them in the Blocks view, right-click and select *Duplicate...*
+
 
 **Task 3:**
 Use the Morse Timer block. It meassures the length of the signals. Build an application that prints out a `.` and `-` for each sign. 
@@ -95,68 +99,58 @@ Extend the application from Task 4. Use the Morse Timer so that you can distingu
 Hints:
 
 * A merge node can be handy here!
-
-
-
-
-
-Hint: Try to build the application on your own. If you have no idea how it should look like, [have a glance here].
+* Try to build the application on your own. If you have no idea how it should look like, [have a glance here].
 
 [have a glance here]: images/morse-code-3.png
 
 
-    import com.bitreactive.library.mqtt.MQTTConfigParam;
-    import com.bitreactive.library.mqtt.MQTTMessage;
-    import com.bitreactive.library.mqtt.robustmqtt.RobustMQTT.Parameters;
-
-
-
-	public String topic;
-	public static String SHORT_MESSAGE = ".";
-	public static String LONG_MESSAGE = "-";
-	
-	public MQTTMessage createShortMessage() {
-		byte[] bytes = new String(SHORT_MESSAGE).getBytes();
-		MQTTMessage message = new MQTTMessage(bytes, topic);
-		return message;
-	}
-
-	public MQTTMessage createLongMessage() {
-		byte[] bytes = new String(LONG_MESSAGE).getBytes();
-		MQTTMessage message = new MQTTMessage(bytes, topic);
-		return message;
-	}
-
-	public String extractMessage(MQTTMessage m) {
-		return new String(m.getPayload());
-	}
-
-	public void unknownString(String s) {
-		logError("Unexpected string received: " + s);
-	}
-
-	public Parameters createSetup() {
-		MQTTConfigParam m = new MQTTConfigParam("dev.bitreactive.com");
-		topic = "t" + Math.random();
-		m.addSubscribeTopic(topic);
-		Parameters p = new Parameters(m, 5);
-		return p;
-	}
-
-Listen to the same topic as you send the messages to. 
-Make sure the topic is unique, so you do not hear the morse signals of other teams that use the same broker.
-
-
 ## Sending Morse Code from one Pi to Another
 
-Find another group.
+**Task 6:**
+Find another team that you can work together with. Modify the application from the previous task, so that the other team can receive your morse messages, and vice-versa. Challenge each other by sending some messages that the others have to decode.
 
-Build the receiver.
-Build the sender.
+Hints:
 
-Agree on a topic to use. 
+* Agree on a topic to use. (Do you need just one, or two? What happens if you both send to the same topic?)
 
-Challenge each other by sending morse code, let the others decode.
+**Task 7: (Optional)**
+
+Work together with more teams, so that one team is sending morse messages and more than one other team receives them. Which team is faster to decode a message?
 
 
-Extra: Make three teams, one team is sending to the two others. Which team is faster to decide the message?
+## Your Own Idea on the Raspberry Pi and Berryclip
+
+**Task 8:**
+Try to come up with your own idea, and build it.
+
+
+Here are all the block to use the Berryclip:
+
+![alt](images/blocks-berryclip.png)
+
+* **Button** lets you detect when the button is pressed down, and when it moves up again. Note that you can only use *one* button per application.
+* **Timed Button** detects if you press once, twice (in short sequence) or if you press for longer. This is useful so you have different  inputs into your application. Cano only be used once per application, and not combined with the Button from above.
+* **Buzzer** lets you control the buzzer, and switch it on or off.
+* **Beep** uses the buffer and beeps for a certain time. You can configure the time as instance parameter. Right-click, and select *Parameters and Generics..*
+* **LED** control a single LED. You can determine which LED it controlls with an instance parameter. (This block you can use as often as you want, for each LED.)
+* **LED Pulse** works similar to the Beep, and blinks an LED for a short time.
+
+The library "Speech Synthesis" includes a block to speak. (When using it on the Raspberry Pi, you'll need to plug in your headphones.)
+
+![alt](images/blocks-speak.png)
+
+Here are blocks that are related to timers:
+
+![alt](images/blocks-timers.png)
+
+Apart from these blocks, you can of course use everything that we already have used above, including MQTT.
+
+
+In the best case, think of your own idea what to build. Here are some suggestions, some more or less simple. 
+
+* Simple: Blink some lights, periodically.
+* Dice Machine
+* Reaction Game
+* Simulate a traffic light (together with others?) 
+
+
