@@ -22,6 +22,20 @@ Simply start your Pi with a monitor connected, and it will print out its ip addr
 
     hostname -I  
     
+Also check if your Pi is connected to the internet:
+
+    ping yr.no
+    
+Should return something like:
+
+    PING yr.no (160.68.205.237) 56(84) bytes of data.
+    From 193.156.90.50 icmp_seq=1 Packet filtered
+    From 193.156.90.50 icmp_seq=3 Packet filtered
+    From 193.156.90.50 icmp_seq=5 Packet filtered
+
+(Abort the ping by pressing `Ctrl` and `c`.
+
+    
 ## SSH 
 
 [SSH] is a protocol to securely connect to a computer. Via SSH you can access the command line, just as if you connected to the computer with a monitor and a keyboard. By default, the Pi has SSH enabled. 

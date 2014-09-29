@@ -40,6 +40,10 @@ We added `sudo` to run it as super user. This is necessary for some programs, es
 
 ## Terminating a Java Program
 
+To terminate a running Java program from within the same terminal where you started it, press the buttons `Ctrl` and `c` at the same time. This should stops the currently executing program. If that does not work, try `Ctrl` and `z`.
+
+You can also open another terminal, and then run the following command:
+
     ps -ef | grep java
 
 You will see a list of processes that have java in their name. Find the proper process, and copy its process number. 
