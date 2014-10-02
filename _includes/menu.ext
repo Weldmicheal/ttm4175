@@ -47,6 +47,17 @@
 <div class="infobox">
 <ul id="menu">
   <li>
+  <a href="#"><b>A4: Bluetooth</b></a>
+  <ul class="fa-ul">
+  <li><i class="fa-li fa fa-flask"></i><a href="../a4/lab.html">Lab A4: Bluetooth</a></li>
+  </ul>
+</li>
+</ul>
+</div>
+
+<div class="infobox">
+<ul id="menu">
+  <li>
   <b>Feedback</b><br/>
   To have an overview how far you come and which exercises are too easy or too hard, we made a big table where
   you can report your status. Whenever you worked on a task, update the table in the column for your team.
@@ -72,17 +83,11 @@
 </ul>
 </div>
 
-<!--
 
-<div class="infobox">
-<ul id="menu">
-  <li>
-  <a href="#"><b>A4: Bluetooth</b></a>
-  <ul>
-  </ul>
-</li>
-</ul>
-</div>
+
+
+
+<!--
 <div class="infobox">
 <ul id="menu">
   <li>
