@@ -17,9 +17,11 @@ We also need to install some extra programs to make Bluetooth work on the Raspbe
 
     sudo apt-get install bluetooth bluez-utils
     
-This may take ca. 5 to 10 minutes.     
-    
-    
+This may take ca. 5 to 10 minutes. While everything installs, have a look at the [video about the beacon][vid].
+
+[vid]:http://youtu.be/Q5SpUnJTuk8
+
+
 ## Activate the Beacon    
     
 Place the battery into the beacon. Make sure that the side of the battery that is marked with `+` points the right way. It should touch the big metal latch on the beacon that is also marked with a `+`.   
@@ -30,7 +32,7 @@ Place the battery into the beacon. Make sure that the side of the battery that i
 
 ## Configure the Beacon  
 
-**Til stuassene: Beskrivelsen for app'en mangler enda. Se om dere klarer det med iPhone eller Android. Ellers kan dere bruke beacons som de er. Det er kun vitkgi at vi har entydige konfirgurasjoner når det er mange som jobber i samme rom.** 
+**Til stuassene: Beskrivelsen for app'en mangler enda. Se om dere klarer det med iPhone eller Android. Ellers kan dere bruke beacons som de er. Det er kun viktig at vi har entydige konfigurasjoner når det er mange som jobber i samme rom.** 
 
 Install the application called **nRF Beacons** either from the App Store on the iPhone or from the Google Play Store for Android. (If you do not have any of the compatible phones, do this tak together with anothe team that has one.)
 
@@ -57,7 +59,7 @@ All programs need again be started with the `sudo` prefix.
 The program cannot be stopped with `Ctrl-c`. Use `Ctrl-z` instead.
 
 
-## Application 1:
+## Application 1: Receiving BLE Data
 
 Download the project **ttm4175.bluetooth** from the Team *TTM4175 (2014)*. It contains the BLE Scanner block, which receives the BLE advertising data.
 
@@ -72,19 +74,28 @@ Start the BLE scanner. You will see a lot of BLE data, from your own beacon and 
 If you see this, the Bluetooth scanner is working.
 
 
-## Application 2:
+## Application 2: Receiving Specific BLE Data
 
-Filter out all BLE data that does not have the minor number that corresponds to your team. So only print out data that matches your beacon.
+Modify the application from above so that it filters out all BLE data that does **not** have the minor number that corresponds to your team. So only print out data that matches your beacon.
 
-## Application 3:
+**Task:**
+Build the application and document it for the report. How does the filtering happen?
 
-The rssi is a meassure for the signal strength. Meassure now the signal strength for different distances. You will see that the rssi will change even if you leave the beacon at a constant distance. Therefore, meassure 10 values for each distance and note them down in a table.
+If you are stuck (and only then), have a look at a [hint][hint1].
 
-Calculate the average of the values, and plot them into a diagram.
+[hint1]: hint1.html
 
-## Application 4:
 
- 
+## Application 3: Plotting the RSSI Values
+
+The [RSSI][rssi] is a measure for the signal strength. Measure now the signal strength for different distances. You will see that the rssi will change even if you leave the beacon at a constant distance. Therefore, measure 10 values for each distance and write them down in a table.
+
+[rssi]: http://en.wikipedia.org/wiki/Received_signal_strength_indication
+
+Calculate the average of the values, and plot them into a diagram. Print the distance on the x-axis, and the average RSSI on the y-axis. Include both the table with the measured values and the diagram into the report.
+
+
+## Application 4: Sensing the Distance of the Beacon
 
 Build an application that show with the LEDs of the Berryclip how far your beacon is away from the Pi.
 
@@ -96,46 +107,43 @@ Try to find sensible values for the RSSI from the diagram above.
 
 
 **Hints:**
-Use the block LEDs from the Berryclip Library, version 1.7.0. The newest version of this library is probably already installed after you have downloaded the other project from above.
 
-You can get the RSSI from the method `getRssi()`from the BLEObservation class.
+* Use the block **LEDs** from the Berryclip Library, version 1.7.0. The newest version of this library is probably already installed after you have downloaded the other project from above. This block accepts an array of booleans as argument. With it, you can set each LED on or off. 
 
+* You can get the RSSI from the method `getRssi()`from the BLEObservation class.
 
-	public BLEObservation filter(BLEObservation o) {
-		if(o.getMinor()== 155 ) { // team id
-			return o;
-		} else {
-			return null;
-		}
-	}
+* You can use a single method that calculates the array of booleans for the LEDs from a BLEObservation, like this:
 
 	public boolean[] getLEDs(BLEObservation o) {
 		boolean[] leds = new boolean[6];
 		int rssi = o.getRssi();
-		System.out.println(rssi);
-		if(rssi>-22) {
-			// very close
-			leds[5] = leds[4] = true;
-		} else if (rssi>-45) {
-			// up to 1 m
-			leds[3] = leds[2] = true;
-		} else if (rssi>-71) {
-			// up to 2 m
-			leds[0] = leds[1] = true;
-		} 
+		...
+        leds[0] = true; // first red LED on!
+        ...
 		return leds;
 	}
-    
-    
-![alt](images/ble-scanner-2.png)    
+
+If you are stuck (and only then), have a look at a [hint][hint2] for the method. Another [hint][hint3] for the system.
+
+[hint2]: hint2.html
+[hint3]: hint3.html
+  
     
 **Task:**    
 Move the beacon to and from the Pi. Is it working? Is it also stable?    
 
+**Task:**
+Document your application for the report. On which values for the RSSI did you settle to turn on the respective LEDs?
 
-## Application 5:
 
-Change your application, and use the method `getAverageRssi()` from the BLEObservation class instead. Now make the experiment from above again. How do the LEDs change now? Do you see an improvement?
+## Application 5: Using Average Values
+
+You may have detected that the RSSI is changing sometimes quickly and without (evident) reason. Therefore, we can use uses the last 5 RSSI values and calculate their average. This value is already included in the BLE data of the building block, 
+
+**Task: ** Change your application, and use the method `getAverageRssi()` from the BLEObservation class instead. Now make the experiment from above again. How do the LEDs change now? Do you see an improvement?
 What is the downside of this approach?
+
+**Task (Optional):** Can you fine-tune the application so that it shows the distance using all 6 LEDs? Are you satisfied with the result?
+
 
 
