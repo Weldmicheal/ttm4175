@@ -78,7 +78,7 @@ If you see this, the Bluetooth scanner is working.
 
 Modify the application from above so that it filters out all BLE data that does **not** have the minor number that corresponds to your team. So only print out data that matches your beacon.
 
-**Task:**
+**Task 4.1:**
 Build the application and document it for the report. How does the filtering happen?
 
 If you are stuck (and only then), have a look at a [hint][hint1].
@@ -129,21 +129,39 @@ If you are stuck (and only then), have a look at a [hint][hint2] for the method.
 [hint3]: hint3.html
   
     
-**Task:**    
-Move the beacon to and from the Pi. Is it working? Is it also stable?    
+**Task 4.2:** Move the beacon to and from the Pi. Is it working? Is it also stable?    
 
-**Task:**
-Document your application for the report. On which values for the RSSI did you settle to turn on the respective LEDs?
+**Task 4.3:** Document your application for the report. On which values for the RSSI did you settle to turn on the respective LEDs?
 
 
 ## Application 5: Using Average Values
 
 You may have detected that the RSSI is changing sometimes quickly and without (evident) reason. Therefore, we can use uses the last 5 RSSI values and calculate their average. This value is already included in the BLE data of the building block, 
 
-**Task: ** Change your application, and use the method `getAverageRssi()` from the BLEObservation class instead. Now make the experiment from above again. How do the LEDs change now? Do you see an improvement?
+**Task 4.4:** Change your application, and use the method `getAverageRssi()` from the BLEObservation class instead. Now make the experiment from above again. How do the LEDs change now? Do you see an improvement?
 What is the downside of this approach?
 
-**Task (Optional):** Can you fine-tune the application so that it shows the distance using all 6 LEDs? Are you satisfied with the result?
+**Task 4.5 (Optional):** Can you fine-tune the application so that it shows the distance using all 6 LEDs? Are you satisfied with the result?
+
+
+## Application 6: Sending Location Data
+
+To test our system for the lab next week, we want to collect as much BLE information as possible. 
+Import the system **ttm4175.bluetooth.zone**.
+
+![alt](images/zone-scanner.png)
+
+This system uses the BLE Scanner as before, but sends it into our broker using the MQTT block. Before you build and run it, find the method where the node name is set. We need this to see from which Raspberry Pi the location data is actually coming.
+
+Marks the BLE information with the id of your team (t1, t2,...) in the method `setLocation()`
+
+	public BLEObservation setLocation(BLEObservation b) {
+		b.setNodeName("tx"); // TODO set to your team t1,... t24
+		return b;
+	}
+
+
+**Task 4.6:** Implement the system and run it. Contact Frank to see if your data is received by the broker. 
 
 
 
