@@ -62,12 +62,19 @@ After that, you should have 3 Raspberry Pis running and reporting Bluetooth data
 
 [json]: http://jsonlint.com/
 
+![](images/system1.png)
+
 
 ## 3 Teams Together: Print RSSI Data
 
 The graph application is implemented in JavaFx. This is a framework to build graphical user interfaces. It is included in Java 8. (We have previously installed Java 7, because only that version was compatible with the Game Tutorial.)
 
 * Install [Java 8][Java 8] on the laptop that should run the graph application
+* Restart Eclipse
+* Ensure that Eclipse is using now Java 8 as default:
+
+![](images/eclipse-java-preference.png)
+
 * Configure and modify the Chart Plotter application
 * (Note that you cannot simply duplicate Chart Plotter, then the startup would not work without adjustment.)
 
@@ -87,19 +94,23 @@ The graph application is implemented in JavaFx. This is a framework to build gra
 * Find out how many data points can be shown in the diagram before it gets too much. Stop data points automatically at some time.
 * (The generated *Start.java* class will **not** work. The generated launch configuration *ChartPlotter.launch* does not work either. This is because JavaFX applications are started slightly different than the other Java programs.) 
 
-
+![](images/system2.png)
 
 **Task:** Record the RSSI and the average RSSI of one beacon towards **one** Pi.
 
 **Task:** Record the average RSSI of one beacon and **two** pis while walking from one Pi to the other.
 
 
-## Configure the BLE Receiver Application
+## Configure the BLE Location Center Application
+
+* Import the project *ttm4175.bluetooth.central*
+* The system is called *BLE Location Center*
 
 * Adjust the BLE Receiver application so it matches your selected topics
 * It needs to subscribe to the right topic to receive the BLE Observation data from the Pis
 * It needs to publish the Location events to the right topic
 
+![](images/system3.png)
 
 ## Setting Up the Table App
 
@@ -107,6 +118,10 @@ The tablet app should in the end show, in which zone (red, yellow, green) the be
 In the end, you should walk from zone to zone with beacon and tablet, and you should see how it updates your zone.
 
 * Go to *Settings*, *Wi-Fi* and connect to Eduroam.
+  * Use PEAP and MSCAPV2
+  * Your identity is your username at NTNU, plus the suffix `@ntnu.no`
+  * Password is your usual NTNU password
+  * Remember to clear the password at the end of the lab
 * Go to *Settings*, *Security* and check **Unknown sources** to allow applications that are not from the Google Play market.
 * Open the browser and download: http://people.item.ntnu.no/~jhklemet/courses/ttm4175/location-app.apk
 * Open the download and install the app
@@ -122,6 +137,8 @@ In the end, you should walk from zone to zone with beacon and tablet, and you sh
 The tablet app does not understand the location data that the BLE Receive Application is sending. Therefore, you should create a very simple application running on a PC. It should receive location updates (via MQTT) and send out data to the tablet app, (again via MQTT). 
 
 It is enough if this application runs on one PC of one team. Share the screenshot of the application for the report.
+
+![](images/system4.png)
 
 
 ## Find a Conclusion
