@@ -98,7 +98,7 @@ The graph application is implemented in JavaFx. This is a framework to build gra
 
 **Task:** Record the RSSI and the average RSSI of one beacon towards **one** Pi.
 
-**Task:** Record the average RSSI of one beacon and **two** pis while walking from one Pi to the other.
+**Task:** Record the average RSSI of one beacon and **two** Pis while walking from one Pi to the other.
 
 
 ## Configure the BLE Location Center Application
