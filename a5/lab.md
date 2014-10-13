@@ -123,7 +123,7 @@ In the end, you should walk from zone to zone with beacon and tablet, and you sh
   * Password is your usual NTNU password
   * Remember to clear the password at the end of the lab
 * Go to *Settings*, *Security* and check **Unknown sources** to allow applications that are not from the Google Play market.
-* Open the browser and download: http://people.item.ntnu.no/~jhklemet/courses/ttm4175/location-app.apk
+* Open the browser and download: http://people.item.ntnu.no/~jhklemet/courses/ttm4175/location_app.apk
 * Open the download and install the app
 * Start the app and edit the settings
     - App status should be "MQTT ok" when everything is working
