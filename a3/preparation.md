@@ -27,6 +27,23 @@ It makes it easy to install a GNU/Linux distribution on the Pi. Read more [here]
 * Reboot
 
 
+## Resetting a Raspberry Pi
+
+When you receive a Raspberry Pi with an SD-card that has been used by someone else before you, it may be a good idea to re-install everything. At the same time you can ensure to run the latest version of the operating system and all programs. 
+
+* Connect the Pi and boot it
+* Press *Shift* when you see the NOOBS window (it tells you to press *Shift*)
+* Select to install Raspbian. Make sure to select only one entry in the list, and select the one that connects to the internet and downloads the newest version. (You can see that it has a Ethernet cable symbol to the right.)
+* It will take ca. 20 minutes to download and extract the OS
+
+After the installation, ensure all programs are updated:
+
+    sudo apt-get update
+    
+    sudo apt-get upgrade
+  
+
+
 ## After Installation
 
 Find out which kernel is installed:

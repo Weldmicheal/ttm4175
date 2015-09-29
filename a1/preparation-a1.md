@@ -12,7 +12,7 @@ When something goes wrong, you still have the other machine then.
 
 ## Install Java
    
-Install the Java Development Kit from **Oracle**. There are other development kits for Java, like OpenJDK or the ones from IBM, but to minimize room for errors we want that all use the same. So, we choose the one from Oracle. Also, since we will later use a special library that is not compatible with the latest version, we need **Java 7**. 
+Install the Java Development Kit from **Oracle**. There are other development kits for Java, like OpenJDK or the ones from IBM, but to minimize room for errors we want that all use the same. So, we choose the one from Oracle. Also, since we will later use a special library that is not compatible with the latest version, we need **Java 8**. 
 
 You can find instructions on how to install Java here:
 
@@ -28,17 +28,3 @@ Eclipse is the development environment that we use to program in Java. Eclipse i
 - <a href="http://reference.bitreactive.com/reference/install-eclipse-windows.html" class="wikilink1" title="install_sdk_win">Installation of Eclipse on Windows</a>
 - <a href="http://reference.bitreactive.com/reference/install-eclipse-mac.html" class="wikilink1" title="install_sdk_mac">Installation of Eclipse on Mac</a>
 - <a href="http://reference.bitreactive.com/reference/install-eclipse-linux.html" class="wikilink1" title="install_sdk_linux">Installation of Eclipse on Linux</a>   
-
-
-
-
-
-{% highlight ruby %}
-def show
-  @widget = Widget(params[:id])
-  respond_to do |format|
-    format.html # show.html.erb
-    format.json { render json: @widget }
-  end
-end
-{% endhighlight %}
