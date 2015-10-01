@@ -85,7 +85,6 @@ When you create a new Eclipse project, you can select the type of project. When 
 
 ![New Project Wizard](images/new-project.png)
 
-(In the screenshot, you see that for the JRE, Java 8 is selected. Since we ask you to install Java 7, this will be different in your case. Simply leave the JRE value at its default, for the Hello World it will work anyways.)
 
 ## The Java Project and the Package Explorer
 
