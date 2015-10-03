@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  Java Language 2
+title:  Java Language - Part 2
 ---
 
 # The Java Language - Part 2

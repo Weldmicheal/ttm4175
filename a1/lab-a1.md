@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  Java Exercises
+title:  Lab A1 - Java and Eclipse (Week 1)
 ---
 
 # Lab A1: Java and Eclipse (Week 1)
@@ -59,7 +59,7 @@ Have a look at the loop in method `loop2()`. Something very important is missing
 
 **Hint:** To abort a running program, you can click the red stop button in the console view. The grey x-buttons remove the output of a program after it terminated.
 
-![Alt text](images/stop-console.png)
+![The console](images/stop-console.png)
 
 
 ## Fibonacci Messed it up

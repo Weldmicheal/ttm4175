@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  Java Language
+title:  Java Language - Part 1
 ---
 
 

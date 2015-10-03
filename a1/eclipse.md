@@ -1,7 +1,11 @@
 ---
 layout: default
-title: Eclipse
+title: Java and Eclipse
+subtitle: TTM4175 Kommunikasjonsteknologi, introduksjon
+abstract: |
+  Java er et programmeringsspråk som dere har hørt om. Eclipse er et verktøy for å programmere i Java, bland annet. Dere kommer til å bruke begge de to ganske ofte i resten av studiene. Vi bruker to uker for å bli skikkelig god på Eclipse, og lærer oss de første trinn i Java. Det tar tid å lære et språk, men vi kommer til å gå gjennom de viktigste tingene i Java. Målet er at dere kan skrive og starte enkle Java programmer, slik at dere er ihvertfall i gang, og kommer godt gjennom resten av labben.
 ---
+
 
 
 # Hello World in Eclipse
@@ -117,11 +121,6 @@ public static void main(String[] args) {
 }
 ~~~
 
-{% highlight java linenos %}
-public static void main(String[] args) {
-	System.out.println("Hello World!");
-}
-{% endhighlight %}    
 
 (We will later have a close look at all the elements in that code line.)
 
@@ -137,4 +136,4 @@ The console view will open, and you will see the following output:
 ![Console with Output for Hello World](images/console-hello-world.png)
 
 
-We have just created and started our fist Java application!
+We have just created and started our first Java application!

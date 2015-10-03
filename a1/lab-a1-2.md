@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  Java Exercises
+title:  Lab A1 - Java and Eclipse (Week 2)
 ---
 
 # Lab A1: Java and Eclipse (Week 2)
@@ -290,7 +290,7 @@ The method below can draw a simple stick figure:
 		g.drawLine(x, y+4*r, x-r, y+5*r);
 	}
     
-![Alt text](images/stick-figure.png)   
+![Stick figure](images/stick-figure.png)   
 
 This is how the stick figure works: The blue markers shows the start point x,y. The other points needed to draw the stick figure are derived from the start point and the variable r. The green point, for instance, is x+r, y+2r. By default, r is chosen to be 7 points. By changing the value of r, the size of the stick figure can be changed.
 
@@ -329,7 +329,7 @@ Use the method to print stick figures all over the image. To get random numbers,
 
 Math.random() returns a double, that means a floating point value. We multiply it first with the width of the image. This results again in a floating point value. The `(int)` is rounding the floating point number into an integer. The result should look like this:
 
-![Alt text](images/stick-figures-random.png)
+![Randomly placed stick figures](images/stick-figures-random.png)
 
 **Task 1.23 (Advanced):**
 Create a method that returns a random color, and use it to draw stick figures of different colors.  
