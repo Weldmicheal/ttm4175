@@ -14,8 +14,6 @@ https://github.com/Desarc/tutorial-game
 
 ![Alt text](images/malcom.png)
 
-The tutorial game uses the version of library for game development that is only compatible with Java 7. So make sure you have Java 7 installed.
-
 
 ## Join the Game Tutorial Team
 
@@ -29,7 +27,7 @@ Join the team for team [Tutorial Game].
 
 Make sure you have joined the team for the game, as described [here].
 The import wizard is [described here]. You can select the team Tutorial Game in the combo box, and then select the project 
-**no.ntnu.oyvinric.tutorialgame.release 1.0.0** for import.
+**no.ntnu.oyvinric.tutorialgame.release 2.0.0** for import. **(Make sure you download version 2.0.0!)**
 
 [here]: preparation-lab2.html
 [described here]: http://reference.bitreactive.com/reference/importing-blocks.html
@@ -71,13 +69,13 @@ Open system LevelX, and use the operations and other elements to build a solutio
 Build the systems the same way as you built the introduction to try out your solution. Adjust your design and repeat until you have solved the level.
 
 
-**Tasks 2.1...2.5: **
+**Tasks 2.1...2.7: **
 Try to solve each level. For each level, describe in the report how you solved it, and include a screenshot of your solution.
 
 
 ## Hello World
 
-**Task 2.6:**
+**Task 2.8:**
 To get some routine how to create a new project and a new building block, do the [Hello World tutorial]. After Hello World  works, can you copy inn the method to calculate Fibonacci numbers from the first week, and print out the 10-th Fibonacci number as part of the hello world?
 
 [Hello World tutorial]: http://reference.bitreactive.com/tutorials/hello-world.html
@@ -85,7 +83,7 @@ To get some routine how to create a new project and a new building block, do the
 
 ## Speech Synthesis
 
-**Task 2.7:**
+**Task 2.9:**
 Do the [speech synthesis tutorial]. In this tutorial, you learn how to use a building block for speech synthesis and let the computer talk one sentence after the other.
 
 [speech synthesis tutorial]: http://reference.bitreactive.com/tutorials/speech-buffer-tutorial.html
