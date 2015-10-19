@@ -1,6 +1,7 @@
 ---
 layout: default
 title:  Java Language - Part 2
+subtitle: TTM4175 Kommunikasjonsteknologi, introduksjon
 ---
 
 # The Java Language - Part 2

@@ -65,7 +65,8 @@ Another important data structure is a **map**. In contrast to the list and set, 
     
 The method `getCharacterToMorseCodeMap()` shown below produces a map object that contains the table from above. The map contains the characters (`a`,`b`,`c`,...) as keys, and their corresponding morse codes (`.-`, `-...`, `-.-.`,...) as values. These morse code values are stored as Strings.  
 
-	public static Map<Character, String> getCharacterToMorseCodeMap() {
+	public static Map<Character, String> 
+	                        getCharacterToMorseCodeMap() {
 		Map<Character, String> morse = 
             new HashMap<Character, String>();
 		morse.put('a',".-");
@@ -112,13 +113,15 @@ The method `getCharacterToMorseCodeMap()` shown below produces a map object that
 Use the map from above to encode a short message into morse code. Use the `get()` method of the map to retrieve the morse code for the characters. You can get an instance of the map object with the morse code in the following way:
 
 	public static void main(String[] args) {
-		Map<Character, String> morse = getCharacterToMorseCodeMap();
+		Map<Character, String> morse = 
+		                      getCharacterToMorseCodeMap();
         ...
 	}
 
 The method below realizes another table. It is the inverse of the map from above. It can be used to decode morse code back into the characters.
 
-	public static Map<String, Character> getMorseCodeToCharacterMap() {
+	public static Map<String, Character> 
+	                         getMorseCodeToCharacterMap() {
 		Map<String, Character> morse = 
             new HashMap<String, Character>();
 		morse.put(".-",'a');
@@ -262,14 +265,17 @@ The class `java.awt.Graphics2D` can draw simple figures on an image.
 
 	public static void main(String[] args) {
 		
-		// create an image and the graphics object to draw on  it
+		// create an image and the 
+		// graphics object to draw on it
 		int width = 1000;
 		int height = 1000;
-		BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+		BufferedImage image = new BufferedImage(width, 
+		            height, BufferedImage.TYPE_INT_RGB);
 		Graphics2D g = image.createGraphics();
 
 		// draw!
-		drawStickFigure((int) (Math.random()*width), (int) (Math.random()*height), g);
+		drawStickFigure((int) (Math.random()*width), 
+		                  (int) (Math.random()*height), g);
 
         // show the image
 		openImage(image);
@@ -391,7 +397,8 @@ Have a look at the methods listed below:
 	 * where each string is one line of the original text.
 	 */
 	public static List<String> getLines(String text) {
-		BufferedReader reader = new BufferedReader(new StringReader(text));
+		BufferedReader reader = 
+		         new BufferedReader(new StringReader(text));
 		List<String> allLines = new ArrayList<String>();
 		try {
 			String line = reader.readLine();
@@ -408,15 +415,18 @@ Have a look at the methods listed below:
 	}
 
 	/*
-	 * Reads a file with the given name and extracts its content as a String.
-	 * The file should be placed right under the Eclipse project of this application.
+	 * Reads a file with the given name and extracts its 
+	 * content as a String. The file should be placed right 
+	 * under the Eclipse project of this application.
 	 */
 	public static String loadFromFile(String fileName) {
 		try {
 			File file = new File(fileName);
 			if(!file.exists()) {
-				System.err.println("Could not find the file. Is it placed correctly and is the name right?");
-				System.err.println("Was searching for: " + file.getAbsolutePath());
+				System.err.println("Could not find the file."
+				  + "Is it placed correctly and is the name right?");
+				System.err.println("Was searching for: " 
+				  + file.getAbsolutePath());
 			}
 			InputStream stream = new FileInputStream(file);
 			Scanner scanner = new Scanner(stream, "UTF-8");
@@ -444,16 +454,19 @@ See below the code to produce such an image:
 		int maxColumns = (allLines.size() / height) + 1;
 		int colWidth = width/maxColumns;
 		
-		BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+		BufferedImage image = new BufferedImage(width, 
+		                height, BufferedImage.TYPE_INT_RGB);
 		Graphics2D graphics = image.createGraphics();
 
 		int line = 0;
-	    for(int column=0; column<maxColumns && line<allLines.size(); column++) {
+	    for(int column=0; column<maxColumns 
+	                && line<allLines.size(); column++) {
 	    	for(int l=0; l<height && line<allLines.size(); l++) {
 	    		String currentLine = allLines.get(line);
 	    		++line;
 	    		graphics.setColor(getLineColor(currentLine));
-	    		graphics.drawLine(column*colWidth, l, (column*colWidth) + colWidth -10, l);
+	    		graphics.drawLine(column*colWidth, l, 
+	    		      (column*colWidth) + colWidth -10, l);
 	    	}
 	    }
 		openImage(image);

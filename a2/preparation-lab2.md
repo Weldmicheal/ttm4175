@@ -7,7 +7,7 @@ title:  Preparation of Lab A2
 
 ## Install Reactive Blocks
 
-This requires that you have installed Java 7 and Eclipse 4.4 from the previous lab.
+This requires that you have installed Java and Eclipse from the previous lab.
 
 * In Eclipse, select Help / Eclipse Marketplace...
 * The Marketplace Wizard should open. Search for "Reactive Blocks"
@@ -41,7 +41,7 @@ To manage which blocks you can see and download, you have to join teams. We have
 
 After you have signed in, visit the website for team [TTM4175 (2014)], and join the team by clicking *Join this Team*. 
 
-[TTM4175 (2014)]: http://blocks.bitreactive.com/#/group/G5olk12n7ik4aa62a
+[TTM4175 (2015)]: http://blocks.bitreactive.com/#/group/Gnq2456vrt801ocm9
 
 ![Alt text](images/join.png)
 
