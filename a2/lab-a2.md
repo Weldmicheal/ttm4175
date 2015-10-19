@@ -69,7 +69,7 @@ Open system LevelX, and use the operations and other elements to build a solutio
 Build the systems the same way as you built the introduction to try out your solution. Adjust your design and repeat until you have solved the level.
 
 
-**Tasks 2.1...2.7: **
+**Tasks 2.1 to 2.7:**
 Try to solve each level. For each level, describe in the report how you solved it, and include a screenshot of your solution.
 
 
