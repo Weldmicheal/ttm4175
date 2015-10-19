@@ -35,11 +35,11 @@ After you signed up, write down with which Facebook or Gmail address you registe
 
 
 
-## Join the TTM4175 (2014) Team
+## Join the TTM4175 Team
 
 To manage which blocks you can see and download, you have to join teams. We have created a team for this course that contains all building blocks that we are going to use. 
 
-After you have signed in, visit the website for team [TTM4175 (2014)], and join the team by clicking *Join this Team*. 
+After you have signed in, visit the website for team [TTM4175 (2015)], and join the team by clicking *Join this Team*. 
 
 [TTM4175 (2015)]: http://blocks.bitreactive.com/#/group/Gnq2456vrt801ocm9
 
