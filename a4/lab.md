@@ -15,7 +15,7 @@ Plug the bluetooth dongle into one of the USB ports of the Pi.
 
 We also need to install some extra programs to make Bluetooth work on the Raspberry Pi. Just type the following:
 
-    sudo apt-get install bluetooth bluez-utils
+    sudo apt-get install bluetooth bluez
     
 This may take ca. 5 to 10 minutes. While everything installs, have a look at the [video about the beacon][vid].
 
@@ -32,9 +32,9 @@ Place the battery into the beacon. Make sure that the side of the battery that i
 
 ## Configure the Beacon  
 
-**Til stuassene: Beskrivelsen for app'en mangler enda. Se om dere klarer det med iPhone eller Android. Ellers kan dere bruke beacons som de er. Det er kun viktig at vi har entydige konfigurasjoner når det er mange som jobber i samme rom.** 
+**Start by reading the technical documentation about the beacon that we distribute in the lab.** 
 
-Install the application called **nRF Beacons** either from the App Store on the iPhone or from the Google Play Store for Android. (If you do not have any of the compatible phones, do this tak together with anothe team that has one.)
+Install the application called **nRF Beacons** either from the App Store on the iPhone or from the Google Play Store for Android. (If you do not have any of the compatible phones, do this tak together with another team that has one.)
 
 Put the beacon into configuration mode, by pressing the button shown below:
 
@@ -61,7 +61,7 @@ The program cannot be stopped with `Ctrl-c`. Use `Ctrl-z` instead.
 
 ## Application 1: Receiving BLE Data
 
-Download the project **ttm4175.bluetooth** from the Team *TTM4175 (2014)*. It contains the BLE Scanner block, which receives the BLE advertising data.
+Download the project **ttm4175.bluetooth** from the Team *TTM4175 (2015)*. It contains the BLE Scanner block, which receives the BLE advertising data.
 
 It also contains the application **Scan Beacon 1**.
 
