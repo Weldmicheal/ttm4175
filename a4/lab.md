@@ -8,7 +8,7 @@ title:  Lab A4
 
 ## Add the Bluetooth Dongle
 
-Plug the bluetooth dongle into one of the USB ports of the Pi. 
+Plug the Bluetooth dongle into one of the USB ports of the Pi. The Bluetooth dongles are labeled *Deltaco* or *Targus*. (The dongles labelled *802.11n* or *Wi-Pi* are for Wifi, which we do not use.)
 
 
 ## Install BlueZ
@@ -54,9 +54,7 @@ We do not need a specific UUID.
 ## Starting and Stopping Java Programs
 
 
-All programs need again be started with the `sudo` prefix.
-
-The program cannot be stopped with `Ctrl-c`. Use `Ctrl-z` instead.
+All programs need again be started with the `sudo` prefix. The program cannot be stopped with `Ctrl-c`. Use `Ctrl-z` instead.
 
 
 ## Application 1: Receiving BLE Data
@@ -92,6 +90,7 @@ The [RSSI][rssi] is a measure for the signal strength. Measure now the signal st
 
 [rssi]: http://en.wikipedia.org/wiki/Received_signal_strength_indication
 
+**Task 4.2:**
 Calculate the average of the values, and plot them into a diagram. Print the distance on the x-axis, and the average RSSI on the y-axis. Include both the table with the measured values and the diagram into the report.
 
 
@@ -129,19 +128,19 @@ If you are stuck (and only then), have a look at a [hint][hint2] for the method.
 [hint3]: hint3.html
   
     
-**Task 4.2:** Move the beacon to and from the Pi. Is it working? Is it also stable?    
+**Task 4.3:** Move the beacon to and from the Pi. Is it working? Is it also stable?    
 
-**Task 4.3:** Document your application for the report. On which values for the RSSI did you settle to turn on the respective LEDs?
+**Task 4.4:** Document your application for the report. On which values for the RSSI did you settle to turn on the respective LEDs?
 
 
 ## Application 5: Using Average Values
 
-You may have detected that the RSSI is changing sometimes quickly and without (evident) reason. Therefore, we can use uses the last 5 RSSI values and calculate their average. This value is already included in the BLE data of the building block, 
+You may have detected that the RSSI is changing sometimes quickly and without (evident) reason. Therefore, we can use uses the last 5 RSSI values and calculate their average. This value is already included in the BLE data of the building block. 
 
-**Task 4.4:** Change your application, and use the method `getAverageRssi()` from the BLEObservation class instead. Now make the experiment from above again. How do the LEDs change now? Do you see an improvement?
+**Task 4.5:** Change your application, and use the method `getAverageRssi()` from the BLEObservation class instead. Now make the experiment from above again. How do the LEDs change now? Do you see an improvement?
 What is the downside of this approach?
 
-**Task 4.5 (Optional):** Can you fine-tune the application so that it shows the distance using all 6 LEDs? Are you satisfied with the result?
+**Task 4.6 (Optional):** Can you fine-tune the application so that it shows the distance using all 6 LEDs? (That means you have not only three different levels, but six?) Are you satisfied with the result?
 
 
 ## Application 6: Sending Location Data
@@ -161,7 +160,7 @@ Marks the BLE information with the id of your team (t1, t2,...) in the method `s
 	}
 
 
-**Task 4.6:** Implement the system and run it. Contact Frank to see if your data is received by the broker. 
+**Task 4.7:** Implement the system and run it. Contact Frank to see if your data is received by the broker. 
 
 
 
