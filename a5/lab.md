@@ -7,8 +7,9 @@ title:  Lab A5
 
 In this lab, we build a more complete system so that we can detect the approximate location of a beacon. We'll use three Raspberry Pis, together with some applications running on PCs for processing data and debugging.
 
+## Local MQTT Broker
 
-
+We are going to use a local MQTT broker. Find the address on the whiteboard.
 
 ## Teamwork
 
@@ -43,8 +44,8 @@ Each team should do this:
 
 * Find the block **Zone Scanner** in project *ttm4175.bluetooth.zone* from last week
 * Modify it:
-  * Only forward BLE data from the beacon with your minor id
-  * Set the node name (the same as the zone name, red, yellow, green) correctly
+  * Only forward BLE data from the beacon with your minor id. Otherwise you will receive too many disturbing events from the other teams.
+  * Each of the Pis represents a zone. Therefore, set the node name (the same as the zone name, red, yellow, green) correctly in the zone scanner.
 
 After that, you should have 3 Raspberry Pis running and reporting Bluetooth data into the system.
 
@@ -67,18 +68,11 @@ After that, you should have 3 Raspberry Pis running and reporting Bluetooth data
 
 ## 3 Teams Together: Print RSSI Data
 
-The graph application is implemented in JavaFx. This is a framework to build graphical user interfaces. It is included in Java 8. (We have previously installed Java 7, because only that version was compatible with the Game Tutorial.)
-
-* Install [Java 8][Java 8] on the laptop that should run the graph application
-* Restart Eclipse
-* Ensure that Eclipse is using now Java 8 as default:
-
-![](images/eclipse-java-preference.png)
+The graph application is implemented in JavaFx. This is a framework to build graphical user interfaces. It is included in Java 8. 
 
 * Configure and modify the Chart Plotter application
 * (Note that you cannot simply duplicate Chart Plotter, then the startup would not work without adjustment.)
 
-[Java 8]: http://www.oracle.com/technetwork/java/javase/downloads/index.html
 
 **Starting the Chart Plotter application:** Since the application is running as a JavaFX application, you have to start it a bit differently than all the other systems.
 
@@ -96,12 +90,14 @@ The graph application is implemented in JavaFx. This is a framework to build gra
 
 ![](images/system2.png)
 
-**Task:** Record the RSSI and the average RSSI of one beacon towards **one** Pi.
+**Task:** Record the RSSI and the average RSSI of one beacon moving towards **one** Pi. Include a screenshot in your report, and explain the difference between the two graphs. 
 
-**Task:** Record the average RSSI of one beacon and **two** Pis while walking from one Pi to the other.
+**Task:** Record the average RSSI of one beacon and **two** Pis that are far away from each other while walking from one Pi to the other. Incude a screenshot of the graph in your report and explain it.
 
 
 ## Configure the BLE Location Center Application
+
+The BLE Location Center application receives the RSSI of the beacons from all connected Pis and decides based on the RSSI ion which zone the beacon most likely is.
 
 * Import the project *ttm4175.bluetooth.central*
 * The system is called *BLE Location Center*
