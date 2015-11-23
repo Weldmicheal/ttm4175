@@ -70,6 +70,8 @@ After that, you should have 3 Raspberry Pis running and reporting Bluetooth data
 
 The graph application is implemented in JavaFx. This is a framework to build graphical user interfaces. It is included in Java 8. 
 
+Fix: [https://www.dropbox.com/s/pmkxfbntmlqj595/plotter.zip?dl=0][https://www.dropbox.com/s/pmkxfbntmlqj595/plotter.zip?dl=0]
+
 * Configure and modify the Chart Plotter application
 * (Note that you cannot simply duplicate Chart Plotter, then the startup would not work without adjustment.)
 
